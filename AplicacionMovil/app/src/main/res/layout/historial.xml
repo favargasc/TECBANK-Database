@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblHistorialSobres"
+        android:layout_width="383dp"
+        android:layout_height="41dp"
+        android:text="Historial de Sobres"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <ScrollView
+        android:id="@+id/spnHistorialSobres"
+        android:layout_width="386dp"
+        android:layout_height="242dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="400dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/lblHistorialTran"
+        android:layout_width="383dp"
+        android:layout_height="41dp"
+        android:text="Historial de Transacciones"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <ScrollView
+        android:id="@+id/spnHistorialSobres"
+        android:layout_width="386dp"
+        android:layout_height="242dp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="83dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnRegresarMenu"
+        android:layout_width="109dp"
+        android:layout_height="46dp"
+        android:text="Menu"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="667dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

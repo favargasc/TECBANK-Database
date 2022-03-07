@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblCambioEuro"
+        android:layout_width="136dp"
+        android:layout_height="49dp"
+        android:text="Compra XXXX \n Venta XXXX"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="615dp" />
+
+    <TextView
+        android:id="@+id/lblEuro"
+        android:layout_width="136dp"
+        android:layout_height="35dp"
+        android:text="Euro"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="571dp" />
+
+    <TextView
+        android:id="@+id/lblHorario"
+        android:layout_width="311dp"
+        android:layout_height="72dp"
+        android:text="Colocar aqui el horario \n Lunes a viernes \n Sabados"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:id="@+id/lblCambioDolar"
+        android:layout_width="136dp"
+        android:layout_height="49dp"
+        android:text="Compra XXXX \n Venta XXXX"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="615dp" />
+
+    <TextView
+        android:id="@+id/lblDolar"
+        android:layout_width="136dp"
+        android:layout_height="35dp"
+        android:text="Dolar"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="571dp" />
+
+    <TextView
+        android:id="@+id/lblHorSucursales"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:text="Horario Sucursales"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <TextView
+        android:id="@+id/lblTipoCambio"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:text="Tipo de Cambio"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="527dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="372dp"
+        android:layout_height="341dp"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
