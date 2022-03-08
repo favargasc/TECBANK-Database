@@ -6,13 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/ingContra"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="355dp" />
 
+    <TextView
+        android:id="@+id/lblingresar"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:text="Ingreso de usuario"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:text="Registrar"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <TextView
+        android:id="@+id/lblNombreIng"
+        android:layout_width="216dp"
+        android:layout_height="37dp"
+        android:text="Nombre Usuario"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <EditText
+        android:id="@+id/ingNombre"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/lblPasswordIng"
+        android:layout_width="216dp"
+        android:layout_height="37dp"
+        android:text="Contraseña"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <Button
+        android:id="@+id/ingresar"
+        android:layout_width="117dp"
+        android:layout_height="52dp"
+        android:text="Ingresar"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <TextView
+        android:id="@+id/labelregistrar"
+        android:layout_width="321dp"
+        android:layout_height="34dp"
+        android:text="Registar Usuario"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="481dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
