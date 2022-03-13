@@ -31,6 +31,7 @@
         android:id="@+id/registrar"
         android:layout_width="127dp"
         android:layout_height="46dp"
+        android:onClick="registrarSesion"
         android:text="Registrar"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="544dp" />
@@ -66,6 +67,7 @@
         android:id="@+id/ingresar"
         android:layout_width="117dp"
         android:layout_height="52dp"
+        android:onClick="iniciarSesion"
         android:text="Ingresar"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="410dp" />

@@ -6,4 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarUsuario">
 
+    <EditText
+        android:id="@+id/regNombreV"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <TextView
+        android:id="@+id/lblRegistro"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:text="Registrarse"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <TextView
+        android:id="@+id/lblCorreoReg"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:text="Correo electronico"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <EditText
+        android:id="@+id/regCorreo"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <EditText
+        android:id="@+id/regNombreUs"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <TextView
+        android:id="@+id/lblNombreUsReg"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:text="Nombre de Usuario"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <TextView
+        android:id="@+id/lblPasswordReg"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:text="Contrseña"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <EditText
+        android:id="@+id/regContra"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <TextView
+        android:id="@+id/lblNombreReg"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:text="Nombre y Apellidos"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <EditText
+        android:id="@+id/regApellido"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/btnRegistrarUs"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:text="Registrar"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="607dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

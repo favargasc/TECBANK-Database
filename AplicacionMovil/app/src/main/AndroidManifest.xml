@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TECBANKMovil">
         <activity
+            android:name=".SucursalesMapa"
+            android:exported="false" />
+        <activity
+            android:name=".Transferencia"
+            android:exported="false" />
+        <activity
+            android:name=".informacionCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".CuentasUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaMenu"
+            android:exported="false" />
+        <activity
+            android:name=".Informacion"
+            android:exported="false" />
+        <activity
             android:name=".RegistrarUsuario"
             android:exported="false" />
         <activity

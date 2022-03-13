@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Informacion">
+
+    <TextView
+        android:id="@+id/lblTipoCambio"
+        android:layout_width="322dp"
+        android:layout_height="36dp"
+        android:text="Tipo de Cambio"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/lblCambioEuro"
+        android:layout_width="255dp"
+        android:layout_height="135dp"
+        android:text="CRC \t\t 600 \nUSD \t\t 1 \nEUR \t\t 641"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/lblVenta"
+        android:layout_width="136dp"
+        android:layout_height="35dp"
+        android:text="Venta"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="361dp" />
+
+    <TextView
+        android:id="@+id/lblCompra"
+        android:layout_width="136dp"
+        android:layout_height="35dp"
+        android:text="Compra"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/lblCompraEdt"
+        android:layout_width="255dp"
+        android:layout_height="135dp"
+        android:text="CRC \t\t 600 \nUSD \t\t 1 \nEUR \t\t 641"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/lblInformacion"
+        android:layout_width="265dp"
+        android:layout_height="72dp"
+        android:text="Informacion"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btnSucursales"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:text="Sucursales"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="572dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

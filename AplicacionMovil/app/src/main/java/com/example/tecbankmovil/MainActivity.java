@@ -9,41 +9,45 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import android.content.Intent;
+
 public class MainActivity extends AppCompatActivity {
-    protected EditText nombre;
-    protected EditText password;
-    protected Button ingresar;
+    public EditText nombre;
+    public EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ingresarUsuario();
+        nombre = (EditText) findViewById(R.id.ingNombre);
+        password = (EditText) findViewById(R.id.ingContra);
 
     }
 
-    public void ingresarUsuario(){
-        nombre = (EditText) findViewById(R.id.ingNombre);
-        password = (EditText) findViewById(R.id.ingContra);
-        ingresar = (Button) findViewById(R.id.ingresar);
+    public void iniciarSesion(View view){
 
-        ingresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String ingNombre = nombre.getText().toString();
-                String ingPassword = password.getText().toString();
-                /*Buscar el password con el */
-                String comprobar = "";
+        String ingNombre = nombre.getEditableText().toString();
+        String ingPassword = password.getEditableText().toString();
+        /*Buscar el password con el */
+        String compNombre = "";
+        String compContra = "";
 
-                if(ingPassword.equals(comprobar)){
-                    Toast.makeText(MainActivity.this, password.getText(),Toast.LENGTH_SHORT).show(); // No seguro de si funciona
-                    // si es correcto pasar al otro frame
-                }else{
-                    //informar de que se ingreso mal el texto
-                }
+        if(ingNombre.equals(compNombre)) {
+            if (ingPassword.equals(compContra)) {
+                Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
+                pantMenu.putExtra("NombreUs", ingNombre); // Pasar dato por paramatro de una activity a otra
+                startActivity(pantMenu); // Iniciar la nueva activity
+            } else {
+                Toast.makeText(MainActivity.this, password.getEditableText(), Toast.LENGTH_SHORT).show(); // No seguro de si funciona
+                //informar de que se ingreso mal el texto
             }
-        });
+        }
+    }
+
+    public void registrarSesion(View view){
+        Intent registrarUs = new Intent(this, RegistrarUsuario.class);
+        startActivity(registrarUs);
     }
 
 }
