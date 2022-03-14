@@ -11,7 +11,8 @@ import java.util.ArrayList;
 
 public class AccountController {
     public ArrayList<Account> getAccountsByUserId(Integer user_id) {
-        String query = "SELECT * FROM account where user_id = " + user_id.toString();
+        String query =  "SELECT * FROM account " +
+                        "WHERE user_id = " + user_id.toString();
         ArrayList<Account> accounts = new ArrayList<>();
 
         try {
@@ -24,7 +25,7 @@ public class AccountController {
             while (response.next()) {
                 accounts.add(new Account(
                     response.getInt("id"),
-                    response.getInt("account_number"),
+                    response.getString("account_number"),
                     response.getDouble("current_balance")
                 ));
             }
