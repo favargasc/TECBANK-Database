@@ -1,41 +1,36 @@
 package com.example.sqlite_connect.controllers;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 import com.example.sqlite_connect.config.DBConnection;
-import com.example.sqlite_connect.models.User;
 
 public class UserController {
-    public ArrayList<User> getUsersByBankId(Integer bank_id) {
-        String query = "SELECT * FROM user WHERE bank_id = " + bank_id.toString();
-        ArrayList<User> users = new ArrayList<>();
+    public int getUserId(String userName, String password) {
+        String query =  "SELECT id FROM user u " +
+                        "WHERE u.user_name = ? " +
+                        "AND u.password = ?";
+
+        int result = -1;
 
         try {
             DBConnection dbConnection = new DBConnection();
             Connection connection = dbConnection.getConnection();
 
-            Statement statement = connection.createStatement();
-            ResultSet response = statement.executeQuery(query);
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, userName);
+            statement.setString(2, password);
 
-            while (response.next()) {
-                users.add(new User(
-                    response.getInt("id"),
-                    response.getString("email"),
-                    response.getString("password"),
-                    response.getString("name"),
-                    response.getString("last_name"),
-                    response.getString("user_name")
-                ));
-            }
+            ResultSet response = statement.executeQuery();
+
+            result = response.getInt("id");
+
             connection.close();
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
-        return users;
+        return result;
     }
 }
