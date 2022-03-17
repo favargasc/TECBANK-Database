@@ -22,6 +22,7 @@ public class Email {
     }
 
     public void send() {
+        // ANTES DE METER LOS DATOS HABILITEN LA AUTH
         //https://myaccount.google.com/lesssecureapps
         //https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
