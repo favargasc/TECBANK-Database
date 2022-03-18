@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvCuentasUs"
+        android:id="@+id/rcvSobres"
         android:layout_width="416dp"
         android:layout_height="660dp"
         tools:layout_editor_absoluteX="-3dp"

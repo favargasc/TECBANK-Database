@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TECBANKMovil">
         <activity
+            android:name=".menuSobres"
+            android:exported="false" />
+        <activity
+            android:name=".infoSobres"
+            android:exported="false" />
+        <activity
             android:name=".SucursalesMapa"
             android:exported="false" />
         <activity

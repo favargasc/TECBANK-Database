@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuSobres">
+
+    <Button
+        android:id="@+id/btnDevolver"
+        android:layout_width="273dp"
+        android:layout_height="52dp"
+        android:onClick="devolver"
+        android:text="Devolver"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <TextView
+        android:id="@+id/lblMenuSobre"
+        android:layout_width="327dp"
+        android:layout_height="89dp"
+        android:text="Menu Sobre de Ahorro"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollHistSobres"
+        android:layout_width="409dp"
+        android:layout_height="373dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/txtMontoMenuSobre"
+        android:layout_width="376dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Monto"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/btnDepositar"
+        android:layout_width="273dp"
+        android:layout_height="52dp"
+        android:onClick="depositar"
+        android:text="Depositar"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="598dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
