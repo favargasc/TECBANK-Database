@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tecbankmovil">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TECBANKMovil">
+        <activity
+            android:name=".menuSobres"
+            android:exported="false" />
+        <activity
+            android:name=".infoSobres"
+            android:exported="false" />
+        <activity
+            android:name=".SucursalesMapa"
+            android:exported="false" />
+        <activity
+            android:name=".Transferencia"
+            android:exported="false" />
+        <activity
+            android:name=".informacionCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".CuentasUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaMenu"
+            android:exported="false" />
+        <activity
+            android:name=".Informacion"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
