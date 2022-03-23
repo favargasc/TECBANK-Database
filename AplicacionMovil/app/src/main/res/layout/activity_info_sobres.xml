@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infoSobres">
+
+    <EditText
+        android:id="@+id/txtMontoSobre"
+        android:layout_width="382dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Monto inicial"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+    <TextView
+        android:id="@+id/lblSobres"
+        android:layout_width="362dp"
+        android:layout_height="53dp"
+        android:text="Sobres de Ahorro"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvSobres"
+        android:layout_width="418dp"
+        android:layout_height="366dp"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <EditText
+        android:id="@+id/txtNombreSobre"
+        android:layout_width="382dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="514dp" />
+
+    <Button
+        android:id="@+id/btnCrearSobre"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="Crear Sobre"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
