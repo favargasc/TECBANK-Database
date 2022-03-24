@@ -2,6 +2,7 @@ package com.example.roomDatabase.Daos;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Insert;
 import androidx.room.Query;
 
 import com.example.roomDatabase.models.SavingEnvelope;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Dao
 public interface SavingEnvelopeDao {
+
   @Insert
   void insert(SavingEnvelope savingEnvelope);
 
