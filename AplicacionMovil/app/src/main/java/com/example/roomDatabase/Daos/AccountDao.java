@@ -18,6 +18,7 @@ public interface AccountDao {
     @Insert
     void insert(Account account);
 
-    @Query("SELECT * FROM Account")
+    @Query("SELECT * FROM account")
     LiveData<List<Account>> getAllBanks();
+
 }

@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import android.content.Intent;
 
+//import com.example.roomDatabase.Populate;
+import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.TecbankDatabase;
 
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChanged(List<Bank> banks) {
+                // not working?
                 System.out.println("Prueba : CHANGE  " + banks.size());
             }
         });
@@ -54,11 +57,16 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected Integer doInBackground(String... strings) {
-                database.bankDao().insert(new Bank("Tkibankca", "TiKi"));
-                System.out.println("Prueba : insert here" );
+                //database.bankDao().insert(new Bank("Tkibankca", "TiKi"));
+                Populate.populateBank(database);
+                //database.bankDao().getBankById("46");
+
+                // not working?
+                System.out.println("Prueba : insert here  " + database.bankDao().getBankById("22" ));
                 return null;
             }
         }.execute("hello", "otra vara");
+
 
         /*SavingEnvelopeController seController = new SavingEnvelopeController();
 
