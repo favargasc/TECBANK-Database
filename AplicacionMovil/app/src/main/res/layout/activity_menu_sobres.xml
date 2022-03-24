@@ -10,53 +10,67 @@
         android:id="@+id/btnDevolver"
         android:layout_width="273dp"
         android:layout_height="52dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="69dp"
         android:onClick="devolver"
         android:text="Devolver"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="650dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDepositar" />
 
     <TextView
         android:id="@+id/lblMenuSobre"
         android:layout_width="327dp"
         android:layout_height="89dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
         android:text="Menu Sobre de Ahorro"
+        android:textAlignment="center"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <ScrollView
-        android:id="@+id/scrollHistSobres"
-        android:layout_width="409dp"
-        android:layout_height="373dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="120dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtMontoMenuSobre"
         android:layout_width="376dp"
         android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Monto"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="533dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
     <Button
         android:id="@+id/btnDepositar"
         android:layout_width="273dp"
         android:layout_height="52dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="69dp"
         android:onClick="depositar"
         android:text="Depositar"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="598dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMontoMenuSobre" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="407dp"
+        android:layout_height="387dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMenuSobre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
