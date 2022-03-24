@@ -6,75 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".Informacion">
 
+    <Button
+        android:id="@+id/btnBenTecbank"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="36dp"
+        android:text="Sucursales"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSucursales" />
+
     <TextView
         android:id="@+id/lblTipoCambio"
         android:layout_width="322dp"
         android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="73dp"
         android:text="Tipo de Cambio"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="109dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblInformacion" />
 
     <TextView
         android:id="@+id/lblCambioEuro"
         android:layout_width="255dp"
         android:layout_height="135dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="13dp"
         android:text="CRC \t\t 600 \nUSD \t\t 1 \nEUR \t\t 641"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSucursales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblVenta" />
 
     <TextView
         android:id="@+id/lblVenta"
-        android:layout_width="136dp"
+        android:layout_width="135dp"
         android:layout_height="35dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="138dp"
         android:text="Venta"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="361dp" />
+        app:layout_constraintBottom_toTopOf="@+id/lblCambioEuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCompraEdt" />
 
     <TextView
         android:id="@+id/lblCompra"
-        android:layout_width="136dp"
+        android:layout_width="135dp"
         android:layout_height="35dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="138dp"
         android:text="Compra"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintBottom_toTopOf="@+id/lblCompraEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipoCambio" />
 
     <TextView
         android:id="@+id/lblCompraEdt"
         android:layout_width="255dp"
         android:layout_height="135dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="78dp"
         android:text="CRC \t\t 600 \nUSD \t\t 1 \nEUR \t\t 641"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCompra" />
 
     <TextView
         android:id="@+id/lblInformacion"
         android:layout_width="265dp"
         android:layout_height="72dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="73dp"
         android:text="Informacion"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSucursales"
         android:layout_width="180dp"
         android:layout_height="75dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="114dp"
         android:text="Sucursales"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="572dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCambioEuro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
