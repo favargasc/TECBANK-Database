@@ -20,7 +20,7 @@ public class informacionCuenta extends AppCompatActivity {
     public void tranDinero(View view){
         Intent pasarDin = new Intent(this, Transferencia.class);
         pasarDin.putExtra("NombreUs", nombreUs);
-        //Agregar el numero de cuenta que seleciono
+        //Agregar el numero de cuenta que seleciono en el reciclerview, si no se puede se cambia el recicler mejor
         startActivity(pasarDin);
     }
 

@@ -27,33 +27,22 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
         android:text="Sobres de Ahorro"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/rcvSobres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvSobres"
-        android:layout_width="410dp"
-        android:layout_height="370dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblSobres" />
 
     <EditText
         android:id="@+id/txtNombreSobre"
         android:layout_width="385dp"
         android:layout_height="60dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="13dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -69,9 +58,19 @@
         android:layout_marginStart="115dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="116dp"
+        android:onClick="crearSobre"
         android:text="Crear Sobre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMontoSobre" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvSobres"
+        android:layout_width="413dp"
+        android:layout_height="373dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSobres" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_para_sobres.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_historial.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.22" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.33" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_maps.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_menu_sobres.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.22" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.25" />
@@ -21,6 +23,8 @@
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/informacionusuario.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/pantallaprincipal.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/registrarusuario.xml" value="0.21" />
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/seccion_info.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/tarjetas.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/transacciones.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto/Primer proyecto/AplicacionMovil/app/src/main/res/layout-keysexposed-nokeys/iniciosesion.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto/Primer proyecto/AplicacionMovil/app/src/main/res/layout-keysexposed-nokeys/inicioyregistro.xml" value="0.25" />
