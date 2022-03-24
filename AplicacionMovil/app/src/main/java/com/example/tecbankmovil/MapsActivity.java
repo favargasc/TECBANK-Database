@@ -1,7 +1,5 @@
 package com.example.tecbankmovil;
 
-import androidx.fragment.app.FragmentActivity;
-
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +8,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentActivity;
+
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -17,7 +18,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.googlemaps.databinding.ActivityMapsBinding;
+import com.example.tecbankmovil.databinding.ActivityMapsBinding;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
