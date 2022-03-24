@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.tecbankmovil.databinding.ActivityCuentasParaSobresBinding;
+
 public class PantallaMenu extends AppCompatActivity {
     private String nombreUs;
 
@@ -23,8 +25,14 @@ public class PantallaMenu extends AppCompatActivity {
         startActivity(cuenta);
     }
 
+    public void sobres(View view){
+        Intent cSobre = new Intent(this, cuentasParaSobres.class);
+        cSobre.putExtra("NombreUs", nombreUs);
+        startActivity(cSobre);
+    }
+
     public void informacion(View view){
-        Intent informacion = new Intent(this, Informacion.class);
+        Intent informacion = new Intent(this, SeccionInfo.class);
         informacion.putExtra("NombreUs", nombreUs);
         startActivity(informacion);
     }

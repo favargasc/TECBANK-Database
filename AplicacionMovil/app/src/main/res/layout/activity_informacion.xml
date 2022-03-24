@@ -28,7 +28,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="73dp"
-        android:text="Tipo de Cambio"
+        android:text="No usar"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
@@ -98,13 +98,13 @@
 
     <TextView
         android:id="@+id/lblInformacion"
-        android:layout_width="265dp"
-        android:layout_height="72dp"
+        android:layout_width="337dp"
+        android:layout_height="83dp"
         android:layout_marginStart="73dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="73dp"
-        android:text="Informacion"
-        android:textSize="48sp"
+        android:text="No usar esta"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

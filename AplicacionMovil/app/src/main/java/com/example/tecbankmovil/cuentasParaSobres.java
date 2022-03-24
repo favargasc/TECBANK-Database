@@ -4,18 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CuentasUsuario extends AppCompatActivity {
+public class cuentasParaSobres extends AppCompatActivity {
     private String nombreUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuentas_usuario);
+        setContentView(R.layout.activity_cuentas_para_sobres);
 
         nombreUs = getIntent().getStringExtra("NombreUs");
     }
 
-
     // utilizacion del reciclerveiw
-    // Unir a informacionCuenta cuando selecione una cuenta en el reciclerveiw
+    // Unir a infoSobres cuando selecione una cuenta en el reciclerveiw
 }
