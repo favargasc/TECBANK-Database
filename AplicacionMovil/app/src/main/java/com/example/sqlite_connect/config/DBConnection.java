@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    static final String path = "jdbc:sqlite:C:\\Users\\josev\\DataGripProjects\\Sqlite3\\tecbank.sqlite";
+    static final String path = "jdbc:sqlite:C:\\Users\\anagu\\OneDrive\\Documentos\\TEC\\SemestreI2022\\Requerimientos\\GilbertsBranch\\TECBANK-Database\\tecbank.sqlite";
 
     public Connection getConnection() {
         Connection connection = null;

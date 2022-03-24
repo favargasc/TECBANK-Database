@@ -38,6 +38,31 @@ public class SavingEnvelopeController {
         return SavingEnvelopes;
     }
 
+    public ArrayList<SavingEnvelope> getSavingEnvelopeByUserName(String userName) {
+        String query = "SELECT * FROM saving_envelope where account_id = " + UserController.getUserId(userName);
+        ArrayList<SavingEnvelope> SavingEnvelopes = new ArrayList<>();
+
+        try {
+            DBConnection dbConnection = new DBConnection();
+            Connection connection = dbConnection.getConnection();
+
+            Statement statement = connection.createStatement();
+            ResultSet response = statement.executeQuery(query);
+
+            while (response.next()) {
+                SavingEnvelopes.add(new SavingEnvelope (
+                        response.getInt("id"),
+                        response.getString("name"),
+                        response.getDouble("current_balance")
+                ));
+            }
+            connection.close();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return SavingEnvelopes;
+    }
+
     public boolean receiveMoney(int savingEnvelopeId, double amount) {
         String query  =     "UPDATE saving_envelope " +
                             "SET current_balance = current_balance + ? " +

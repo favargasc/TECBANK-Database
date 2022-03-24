@@ -19,13 +19,15 @@
         android:id="@+id/lblingresar"
         android:layout_width="322dp"
         android:layout_height="36dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="88dp"
         android:text="Ingreso de usuario"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="89dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/registrar"

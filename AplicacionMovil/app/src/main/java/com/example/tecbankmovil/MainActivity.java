@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import android.content.Intent;
 
+import com.example.sqlite_connect.controllers.SavingEnvelopeController;
+import com.example.sqlite_connect.controllers.UserController;
+
 public class MainActivity extends AppCompatActivity {
     public EditText nombre;
     public EditText password;
@@ -22,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
         nombre = (EditText) findViewById(R.id.ingNombre);
         password = (EditText) findViewById(R.id.ingContra);
+
+
+        SavingEnvelopeController seController = new SavingEnvelopeController();
+
+        UserController uController = new UserController();
+
+        int res = uController.getUserId("lwarhurst0", "Xmj9QM74");
+        System.out.println("PRUEBA: " + res);
+        System.out.println("PRUEBA: " + res);
+
 
     }
 
