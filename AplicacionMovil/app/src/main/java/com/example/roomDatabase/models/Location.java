@@ -18,18 +18,45 @@ public class Location {
     }
 
     public Integer getId() {
-        return id;
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCoordinates() {
-        return coordinates;
+        return this.coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
     }
 
     public String getName() {
-        return name;
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSchedule() {
-        return schedule;
+        return this.schedule;
     }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " id='" + getId() + "'" +
+                ", coordinates='" + getCoordinates() + "'" +
+                ", name='" + getName() + "'" +
+                ", schedule='" + getSchedule() + "'" +
+                "}";
+    }
+
 }
