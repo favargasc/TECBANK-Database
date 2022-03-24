@@ -1,18 +1,22 @@
 package com.example.tecbankmovil;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import android.content.Intent;
 
-import com.example.sqlite_connect.controllers.SavingEnvelopeController;
-import com.example.sqlite_connect.controllers.UserController;
+import com.example.roomDatabase.models.Bank;
+import com.example.roomDatabase.TecbankDatabase;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public EditText nombre;
@@ -26,14 +30,43 @@ public class MainActivity extends AppCompatActivity {
         nombre = (EditText) findViewById(R.id.ingNombre);
         password = (EditText) findViewById(R.id.ingContra);
 
+        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+        //database.bankDao().insert(new Bank(1,"TECBANK", "TBNK"));
 
-        SavingEnvelopeController seController = new SavingEnvelopeController();
+        database.bankDao().getAllBanks().observe(this,new Observer<List<Bank>>(){
+
+            @Override
+            public void onChanged(List<Bank> banks) {
+                System.out.println("Prueba : CHANGE  " + banks.size());
+            }
+        });
+
+        Runnable myRunnable =
+                new Runnable(){
+                    public void run(){
+                        System.out.println("Prueba : insert here");
+
+                    }
+                };
+
+        //myRunnable.run();
+        new AsyncTask<String,Void,Integer>(){
+
+            @Override
+            protected Integer doInBackground(String... strings) {
+                database.bankDao().insert(new Bank("Tkibankca", "TiKi"));
+                System.out.println("Prueba : insert here" );
+                return null;
+            }
+        }.execute("hello", "otra vara");
+
+        /*SavingEnvelopeController seController = new SavingEnvelopeController();
 
         UserController uController = new UserController();
 
         int res = uController.getUserId("lwarhurst0", "Xmj9QM74");
         System.out.println("PRUEBA: " + res);
-        System.out.println("PRUEBA: " + res);
+        System.out.println("PRUEBA: " + res);*/
 
 
     }

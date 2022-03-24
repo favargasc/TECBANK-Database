@@ -8,5 +8,17 @@
       <jdbc-url>jdbc:sqlite:tecbank.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="tecbank" uuid="dd96e158-8d1c-4ebf-a987-85a4809aff26">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Requerimientos\GilbertsBranch\TECBANK-Database\AplicacionMovil\app\src\main\java\com\example\roomDatabase\tecbank.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.36.0.3/sqlite-jdbc-3.36.0.3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>
