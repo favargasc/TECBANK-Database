@@ -10,16 +10,16 @@ import androidx.room.PrimaryKey;
 public class Account {
 
     @PrimaryKey(autoGenerate = true)
-    int id;
+    public int id;
 
     @ColumnInfo(name = "account_number")
-    String account_number;
+    public String account_number;
 
     @ColumnInfo(name = "current_balance")
-    double current_balance;
+    public double current_balance;
 
     @ColumnInfo(name = "user_id")
-    int user_id;
+    public int user_id;
 
     @Ignore
     public Account(int id, String account_number, double current_balance, int user_id) {

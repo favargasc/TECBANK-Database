@@ -9,8 +9,8 @@ import androidx.room.PrimaryKey;
 public class Location {
 
     @PrimaryKey(autoGenerate = true)
-    Integer id;
-    String coordinates, name, schedule;
+    public Integer id;
+    public String coordinates, name, schedule;
 
     @Ignore
     public Location(Integer id, String coordinates, String name, String schedule) {

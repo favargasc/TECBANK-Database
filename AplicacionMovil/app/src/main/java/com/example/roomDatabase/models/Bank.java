@@ -11,13 +11,13 @@ public class Bank {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    int id;
+    public int id;
 
     @ColumnInfo(name = "name")
-    String name;
+    public String name;
 
     @ColumnInfo(name = "code")
-    String code;
+    public String code;
 
     @Ignore
     public Bank(int id, String name, String code) {

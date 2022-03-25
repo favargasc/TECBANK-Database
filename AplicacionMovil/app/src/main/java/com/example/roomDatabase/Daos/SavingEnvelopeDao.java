@@ -5,7 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.exmaple.roomDatabase.models.Account;
+import com.example.roomDatabase.models.Account;
 import com.example.roomDatabase.models.SavingEnvelope;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public interface SavingEnvelopeDao {
   @Query("DELETE FROM saving_envelope WHERE id = :savingEnvelopeId")
   void delete(int savingEnvelopeId);
 
-  @Query("SELECT a.id, a.account_number, a.current_balance FROM saving_envelope se INNER JOIN account a ON a.id = se.account_id WHERE se.id = :savingEnvelopeId")
+  @Query("SELECT a.id, a.account_number, a.current_balance, a.user_id FROM saving_envelope se INNER JOIN account a ON a.id = se.account_id WHERE se.id = :savingEnvelopeId")
   LiveData<Account> getAccount(int savingEnvelopeId);
 
   @Query("select id, name, current_balance from saving_envelope where id = :savingEnvelopeId")
@@ -40,6 +40,8 @@ public interface SavingEnvelopeDao {
   @Query("UPDATE account SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
   void increaseAccountCB(int savingEnvelopeId, double amount);
 
-  @Query("INSERT INTO saving_envelope_log (amount, date, transaction_type_id) VALUES (:amount, :date, :transactionTypeId)")
+/*  @Query("INSERT INTO saving_envelope_log(amount, date, transaction_type_id) VALUES (:amount, :date, :transactionTypeId)")
   void saveInLog(double amount, String date, int transactionTypeId);
+  */
 }
+
