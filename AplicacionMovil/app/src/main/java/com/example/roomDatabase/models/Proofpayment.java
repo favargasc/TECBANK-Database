@@ -6,7 +6,6 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "proof_of_payment")
-
 public class Proofpayment {
     @PrimaryKey(autoGenerate = true)
     Integer id;
@@ -94,15 +93,15 @@ public class Proofpayment {
     @java.lang.Override
     public java.lang.String toString() {
         return "Proofpayment{" +
-            "id=" + id +
-            ", resAccount='" + resAccount + '\'' +
-            ", reqAccount='" + reqAccount + '\'' +
-            ", idCard=" + idCard +
-            ", amount=" + amount +
-            ", detail='" + detail + '\'' +
-            ", transactionTypeId=" + transactionTypeId +
-            ", commission=" + commission +
-            ", bankId=" + bankId +
-            '}';
+                "id=" + id +
+                ", resAccount='" + resAccount + '\'' +
+                ", reqAccount='" + reqAccount + '\'' +
+                ", idCard=" + idCard +
+                ", amount=" + amount +
+                ", detail='" + detail + '\'' +
+                ", transactionTypeId=" + transactionTypeId +
+                ", commission=" + commission +
+                ", bankId=" + bankId +
+                '}';
     }
 }
