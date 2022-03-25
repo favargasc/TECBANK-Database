@@ -13,19 +13,19 @@ public class SavingEnvelopeLog {
     @ColumnInfo(name = "name")
     Double amount;
     @ColumnInfo(name = "current_balance")
-    Strring date;
+    String date;
     @ColumnInfo(name = "account_id")
     Integer transaction_type_id;
 
     @Ignore
-    public SavingEnvelopeLog(Integer id, Double amount, Strring date, Integer transaction_type_id) {
+    public SavingEnvelopeLog(Integer id, Double amount, String date, Integer transaction_type_id) {
         this.id = id;
         this.amount = amount;
         this.date = date;
         this.transaction_type_id = transaction_type_id;
     }
 
-    public SavingEnvelopeLog(Double amount, Strring date, Integer transaction_type_id) {
+    public SavingEnvelopeLog(Double amount, String date, Integer transaction_type_id) {
         this.id = id;
         this.amount = amount;
         this.date = date;
@@ -44,7 +44,7 @@ public class SavingEnvelopeLog {
         return amount;
     }
 
-    public Strring getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -55,10 +55,10 @@ public class SavingEnvelopeLog {
     @java.lang.Override
     public java.lang.String toString() {
         return "SavingEnvelopeLog{" +
-            "id=" + id +
-            ", amount=" + amount +
-            ", date=" + date +
-            ", transaction_type_id=" + transaction_type_id +
-            '}';
+                "id=" + id +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", transaction_type_id=" + transaction_type_id +
+                '}';
     }
 }

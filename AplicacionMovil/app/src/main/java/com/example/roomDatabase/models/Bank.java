@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "bank" , indices = {@Index(value = {"code"},unique = true)})
 public class Bank {
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     public int id;

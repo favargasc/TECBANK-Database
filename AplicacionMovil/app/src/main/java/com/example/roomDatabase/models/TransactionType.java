@@ -7,7 +7,7 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "transaction_type" , indices = {@Index(value = {"name"},unique = true)})
-public class Bank {
+public class TransactionType {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
@@ -17,12 +17,12 @@ public class Bank {
     String name;
 
     @Ignore
-    public Bank(int id, String name) {
+    public TransactionType(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Bank(String name) {
+    public TransactionType(String name) {
         this.name = name;
     }
 
