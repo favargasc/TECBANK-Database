@@ -12,7 +12,7 @@ public class DBConnection {
 
         try {
             connection = DriverManager.getConnection(path);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
         }
         return connection;

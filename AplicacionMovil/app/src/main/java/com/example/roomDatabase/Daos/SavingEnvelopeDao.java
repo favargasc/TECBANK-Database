@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.models.SavingEnvelope;
 
 import java.util.List;
@@ -16,10 +17,10 @@ public interface SavingEnvelopeDao {
   void insert(SavingEnvelope savingEnvelope);
 
   @Query("SELECT * FROM saving_envelope where account_id = :accountId")
-  LiveData<Integer> getSavingEnvelopeByAccountId(int accountId);
+  LiveData<List<SavingEnvelope>> getSavingEnvelopeByAccountId(int accountId);
 
   @Query("UPDATE saving_envelope SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
-  LiveData<Boolean> receiveMoney(int savingEnvelopeId, double amount);
+  void receiveMoney(int savingEnvelopeId, double amount);
 
   @Query("UPDATE saving_envelope SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
   LiveData<Boolean> returnMoney(int savingEnvelopeId, double amount);

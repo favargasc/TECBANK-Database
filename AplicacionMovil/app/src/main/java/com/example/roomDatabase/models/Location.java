@@ -1,17 +1,26 @@
 package com.example.roomDatabase.models;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "location")
 public class Location {
 
     @PrimaryKey(autoGenerate = true)
     Integer id;
     String coordinates, name, schedule;
 
+    @Ignore
     public Location(Integer id, String coordinates, String name, String schedule) {
         this.id = id;
+        this.coordinates = coordinates;
+        this.name = name;
+        this.schedule = schedule;
+    }
+
+    public Location(String coordinates, String name, String schedule) {
         this.coordinates = coordinates;
         this.name = name;
         this.schedule = schedule;

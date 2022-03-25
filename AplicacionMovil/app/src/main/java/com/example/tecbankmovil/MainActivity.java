@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
             protected Integer doInBackground(String... strings) {
                 //database.bankDao().insert(new Bank("Tkibankca", "TiKi"));
                 Populate.populateBank(database);
+                Populate.populateLocation(database);
+                Populate.populateUser(database);
+                Populate.populateAccount(database);
+                Populate.populateEnvelopes(database);
                 //database.bankDao().getBankById("46");
 
                 // not working?
