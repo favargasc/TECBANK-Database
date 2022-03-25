@@ -9,101 +9,152 @@
     <EditText
         android:id="@+id/regNombreV"
         android:layout_width="130dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="11dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="168dp" />
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        app:layout_constraintEnd_toStartOf="@+id/regApellido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreReg" />
 
     <TextView
         android:id="@+id/lblRegistro"
         android:layout_width="358dp"
         android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="13dp"
         android:text="Registrarse"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="39dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lblCorreoReg"
         android:layout_width="340dp"
         android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="31dp"
         android:text="Correo electronico"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regNombreV" />
 
     <EditText
         android:id="@+id/regCorreo"
         android:layout_width="340dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="34dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="282dp" />
+        android:text="Correo Electronico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreoReg" />
 
     <EditText
         android:id="@+id/regNombreUs"
         android:layout_width="340dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="393dp" />
+        android:text="Nombre Usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreUsReg" />
 
     <TextView
         android:id="@+id/lblNombreUsReg"
         android:layout_width="340dp"
         android:layout_height="40dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         android:text="Nombre de Usuario"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="338dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regCorreo" />
 
     <TextView
         android:id="@+id/lblPasswordReg"
         android:layout_width="340dp"
         android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="36dp"
         android:text="Contrseña"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regNombreUs" />
 
     <EditText
         android:id="@+id/regContra"
         android:layout_width="340dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="508dp" />
+        android:text="Contraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPasswordReg" />
 
     <TextView
         android:id="@+id/lblNombreReg"
         android:layout_width="340dp"
         android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="31dp"
         android:text="Nombre y Apellidos"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="119dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblRegistro" />
 
     <EditText
         android:id="@+id/regApellido"
         android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="31dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="168dp" />
+        android:inputType="textPersonName"
+        android:text="Apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/regNombreV"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreReg" />
 
     <Button
         android:id="@+id/btnRegistrarUs"
         android:layout_width="127dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="76dp"
         android:text="Registrar"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="607dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regContra" />
 </androidx.constraintlayout.widget.ConstraintLayout>

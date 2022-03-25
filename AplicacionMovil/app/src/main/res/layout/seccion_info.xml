@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="276dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/cambio"
+        android:textColor="#050505"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:text=" Tipo de cambio" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="377dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/fondoInfo"
+        android:scaleX="10"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="331dp"
+        android:layout_height="72dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/SeccionInfo"
+        android:textColor="#050505"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.483"
+        tools:text="Información" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="344dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="339dp"
+            android:layout_height="159dp"
+            android:contentDescription="@string/fondoCompra"
+            android:scaleY="1"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/comprafondo" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/siglasEuro"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            tools:text="EUR" />
+
+        <TextView
+            android:id="@+id/CompraDolar"
+            android:layout_width="88dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/siglasDolar"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            tools:text="USD" />
+
+        <TextView
+            android:id="@+id/CompraEuro"
+            android:layout_width="87dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="339dp"
+        android:layout_height="378dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="339dp"
+            android:layout_height="159dp"
+            android:contentDescription="@string/fondoCompra"
+            android:scaleY="1"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ventafondo" />
+
+        <TextView
+            android:id="@+id/ventaDolar"
+            android:layout_width="88dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/ventaEuro"
+            android:layout_width="87dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/ventaDolar" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/siglasDolar"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            tools:text="USD" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="28dp"
+            android:text="@string/siglasEuro"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            tools:text="EUR" />
+
+        <Button
+            android:id="@+id/btnSucursales"
+            android:layout_width="329dp"
+            android:layout_height="65dp"
+            android:background="@color/red"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/sucursales"
+            android:textColor="#040404"
+            android:textSize="20sp"
+            app:iconTint="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/btnTrajetas"
+            android:layout_width="329dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:autoText="false"
+            android:background="@color/red"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/Tarjetas"
+            android:textColor="#040404"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSucursales" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

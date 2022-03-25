@@ -8,41 +8,62 @@
 
     <Button
         android:id="@+id/trnDinero"
-        android:layout_width="117dp"
-        android:layout_height="52dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="42dp"
         android:onClick="tranDinero"
         android:text="Transferir Dinero"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcvHistorialCuenta" />
 
     <TextView
         android:id="@+id/lblHistoriaCuenta"
-        android:layout_width="124dp"
+        android:layout_width="125dp"
         android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="1dp"
         android:text="Historial"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="121dp" />
+        app:layout_constraintBottom_toTopOf="@+id/rcvHistorialCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblInfoCuenta" />
 
     <TextView
         android:id="@+id/lblInfoCuenta"
         android:layout_width="166dp"
         android:layout_height="75dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="123dp"
         android:text="Infomación \nCuenta"
+        android:textAlignment="center"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvHistorialCuenta"
         android:layout_width="409dp"
         android:layout_height="451dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="162dp" />
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblHistoriaCuenta" />
 </androidx.constraintlayout.widget.ConstraintLayout>

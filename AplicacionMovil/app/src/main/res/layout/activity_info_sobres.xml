@@ -8,49 +8,69 @@
 
     <EditText
         android:id="@+id/txtMontoSobre"
-        android:layout_width="382dp"
-        android:layout_height="56dp"
+        android:layout_width="385dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Monto inicial"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="584dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreSobre" />
 
     <TextView
         android:id="@+id/lblSobres"
         android:layout_width="362dp"
         android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:text="Sobres de Ahorro"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvSobres"
-        android:layout_width="418dp"
-        android:layout_height="366dp"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="109dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtNombreSobre"
-        android:layout_width="382dp"
-        android:layout_height="57dp"
+        android:layout_width="385dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nombre"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="514dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcvSobres" />
 
     <Button
         android:id="@+id/btnCrearSobre"
         android:layout_width="180dp"
         android:layout_height="48dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="116dp"
+        android:onClick="crearSobre"
         android:text="Crear Sobre"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMontoSobre" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvSobres"
+        android:layout_width="413dp"
+        android:layout_height="373dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSobres" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

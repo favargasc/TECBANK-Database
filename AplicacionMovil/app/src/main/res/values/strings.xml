@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">TECBANKMovil</string>
-    <string name="beneficios">Beneficios:</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="fondoInfo">Fondo informacion</string>
+    <string name="fondoCompra">Fondo cambio Compra</string>
+    <string name="SeccionInfo">Información</string>
+    <string name="cambio">Tipo de cambio</string>
+    <string name="siglasDolar">USD</string>
+    <string name="siglasEuro">EUR</string>
+    <string name="colon">₡</string>
+    <string name="sucursales">Sucursales</string>
+    <string name="Tarjetas">Tarjetas TECBANK</string>
+    <string name="Beneficios">Beneficios TECBANK</string>
 </resources>
