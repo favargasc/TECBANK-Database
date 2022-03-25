@@ -3,32 +3,33 @@ package com.example.roomDatabase.models;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "user")
+@Entity(tableName = "user", indices = {@Index(value = {"user_name"},unique = true)})
 public class User {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "id")
-  int id;
+  public int id;
 
   @ColumnInfo(name = "name")
-  String name;
+  public String name;
 
   @ColumnInfo(name = "last_name")
-  String lastName;
+  public String lastName;
 
   @ColumnInfo(name = "password")
-  String password;
+  public String password;
 
   @ColumnInfo(name = "email")
-  String email;
+  public String email;
 
   @ColumnInfo(name = "bank_id")
-  int bankId;
+  public int bankId;
 
   @ColumnInfo(name = "user_name")
-  String userName;
+  public String userName;
 
   @Ignore
   public User(int id, String name, String lastName, String password, String email, int bankId, String userName) {

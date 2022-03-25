@@ -9,13 +9,13 @@ import androidx.room.PrimaryKey;
 public class SavingEnvelope {
 
     @PrimaryKey(autoGenerate = true)
-    Integer id;
+    public Integer id;
     @ColumnInfo(name = "name")
-    String name;
+    public String name;
     @ColumnInfo(name = "current_balance")
-    Double current_balance;
+    public Double current_balance;
     @ColumnInfo(name = "account_id")
-    Integer account_id;
+    public Integer account_id;
 
     @Ignore
     public SavingEnvelope(Integer id, String name, Double current_balance, Integer account_id) {
