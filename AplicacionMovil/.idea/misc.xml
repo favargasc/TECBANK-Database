@@ -5,13 +5,13 @@
       <map>
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_historial.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.22" />
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.33" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_menu_sobres.xml" value="0.25" />
-        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_sucursales_mapa.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto App/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_transacciones.xml" value="0.33" />
@@ -32,18 +32,25 @@
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto/Primer proyecto/AplicacionMovil/app/src/main/res/layout/pantallaprincipal.xml" value="0.2" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto/Primer proyecto/AplicacionMovil/app/src/main/res/layout/registrarusuario.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Gilberth/Desktop/TEC/5_Semestre/Requerimientos/Proyecto/Primer proyecto/AplicacionMovil/app/src/main/res/layout/transacciones.xml" value="0.22" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/drawable/ic_launcher_background.xml" value="0.156" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/font/archivo_black.xml" value="0.1765625" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_maps.xml" value="0.1" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/seccion_info.xml" value="0.29010416666666666" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/tarjetas.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/drawable/ic_base_credit_card.xml" value="0.3635" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_menu_sobres.xml" value="0.536" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.3625" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_account.xml" value="0.264" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_card.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/Gilberts Branch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_cards.xml" value="0.4" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.15391192817443353" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_sucursales_mapa.xml" value="0.15391192817443353" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_card.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
