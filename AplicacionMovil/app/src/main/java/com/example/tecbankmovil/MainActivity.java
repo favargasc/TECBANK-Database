@@ -17,12 +17,14 @@ import android.content.Intent;
 import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.TecbankDatabase;
+import com.example.roomDatabase.models.User;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public EditText nombre;
     public EditText password;
+    TecbankDatabase database = TecbankDatabase.getDatabase(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,17 +90,17 @@ public class MainActivity extends AppCompatActivity {
         String ingNombre = nombre.getEditableText().toString();
         String ingPassword = password.getEditableText().toString();
 
-        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+        LiveData<Integer> user = database.userDao().getUserId(ingNombre,ingPassword);
 
-        database.userDao().getUserId(ingNombre, ingPassword);
-
-        if (ingNombre != "") {
-            Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
-            pantMenu.putExtra("NombreUs", ingNombre); // Pasar dato por paramatro de una activity a otra
-            startActivity(pantMenu); // Iniciar la nueva activity
-        } else {
+        if (user.getValue().equals(-1)) {
             Toast.makeText(MainActivity.this, password.getEditableText(), Toast.LENGTH_SHORT).show(); // No seguro de si funciona
             //informar de que se ingreso mal el texto
+
+        } else {
+            Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
+            pantMenu.putExtra("accountId", user.getValue()); // Pasar dato por paramatro de una activity a otra, se tiene que pasar el user id
+
+            startActivity(pantMenu); // Iniciar la nueva activity
         }
     }
 

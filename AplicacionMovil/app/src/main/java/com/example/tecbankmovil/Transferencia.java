@@ -8,18 +8,18 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.roomDatabase.TecbankDatabase;
+
 public class Transferencia extends AppCompatActivity {
-    private String nombreUs;
-    private EditText numCuenta;
-    private EditText monto;
-    private EditText cedula;
+    private int accountId;
+    private EditText numCuenta, monto, cedula;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transferencia);
 
-        nombreUs = getIntent().getStringExtra("NombreUs");
+        accountId = getIntent().getIntExtra("accountId",-1);
 
         numCuenta = (EditText) findViewById(R.id.eTxtNumCuenta);
         monto = (EditText) findViewById(R.id.eTxtMontoTran);
@@ -32,7 +32,7 @@ public class Transferencia extends AppCompatActivity {
 
         //Cuando termina la transaccion que se devuelva al main menu
         Intent panMenu = new Intent(this, PantallaMenu.class);
-        panMenu.putExtra("NombreUs", nombreUs);
+        panMenu.putExtra("accountId", accountId);
         startActivity(panMenu);
     }
 }
