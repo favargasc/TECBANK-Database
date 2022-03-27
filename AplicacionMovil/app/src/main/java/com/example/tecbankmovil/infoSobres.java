@@ -18,7 +18,7 @@ public class infoSobres extends AppCompatActivity {
         setContentView(R.layout.activity_info_sobres);
 
         nombreUs = getIntent().getStringExtra("NombreUs");
-        numCuenta = getIntent().getIntExtra("NumCuenta");
+        numCuenta = getIntent().getIntExtra("NumCuenta",0);
 
         nomSobre = (EditText) findViewById(R.id.txtNombreSobre);
         montoInicial = (EditText) findViewById(R.id.txtMontoSobre);

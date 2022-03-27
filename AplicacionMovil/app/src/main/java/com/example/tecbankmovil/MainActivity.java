@@ -87,19 +87,18 @@ public class MainActivity extends AppCompatActivity {
 
         String ingNombre = nombre.getEditableText().toString();
         String ingPassword = password.getEditableText().toString();
-        /*Buscar el password con el */
-        String compNombre = "";
-        String compContra = "";
 
-        if(ingNombre.equals(compNombre)) {
-            if (ingPassword.equals(compContra)) {
-                Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
-                pantMenu.putExtra("NombreUs", ingNombre); // Pasar dato por paramatro de una activity a otra
-                startActivity(pantMenu); // Iniciar la nueva activity
-            } else {
-                Toast.makeText(MainActivity.this, password.getEditableText(), Toast.LENGTH_SHORT).show(); // No seguro de si funciona
-                //informar de que se ingreso mal el texto
-            }
+        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+
+        database.userDao().getUserId(ingNombre, ingPassword);
+
+        if (ingNombre != "") {
+            Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
+            pantMenu.putExtra("NombreUs", ingNombre); // Pasar dato por paramatro de una activity a otra
+            startActivity(pantMenu); // Iniciar la nueva activity
+        } else {
+            Toast.makeText(MainActivity.this, password.getEditableText(), Toast.LENGTH_SHORT).show(); // No seguro de si funciona
+            //informar de que se ingreso mal el texto
         }
     }
 

@@ -16,5 +16,5 @@ public interface UserDao {
     void insert(User user);
 
     @Query("SELECT id FROM user u WHERE u.user_name = :userName AND u.password = :password")
-    LiveData<Integer> getUserId(int userName, String password);
+    LiveData<Integer> getUserId(String userName, String password);
 }
