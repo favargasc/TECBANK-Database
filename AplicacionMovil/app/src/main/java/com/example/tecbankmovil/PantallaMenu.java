@@ -9,31 +9,31 @@ import android.view.View;
 import com.example.tecbankmovil.databinding.ActivityCuentasParaSobresBinding;
 
 public class PantallaMenu extends AppCompatActivity {
-    private String nombreUs;
+    private int accountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_menu);
 
-        nombreUs = getIntent().getStringExtra("NombreUs");
+        accountId = getIntent().getIntExtra("accountId",-1);
     }
 
     public void cuentas(View view){
         Intent cuenta = new Intent(this, CuentasUsuario.class);
-        cuenta.putExtra("NombreUs", nombreUs);
+        cuenta.putExtra("accountId", accountId);
         startActivity(cuenta);
     }
 
     public void sobres(View view){
         Intent cSobre = new Intent(this, cuentasParaSobres.class);
-        cSobre.putExtra("NombreUs", nombreUs);
+        cSobre.putExtra("accountId", accountId);
         startActivity(cSobre);
     }
 
     public void informacion(View view){
         Intent informacion = new Intent(this, SeccionInfo.class);
-        informacion.putExtra("NombreUs", nombreUs);
+        informacion.putExtra("accountId", accountId);
         startActivity(informacion);
     }
 

@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 
 public class informacionCuenta extends AppCompatActivity {
-    private String nombreUs;
+    private int accountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_cuenta);
 
-        nombreUs = getIntent().getStringExtra("NombreUs");
+        accountId = getIntent().getIntExtra("accountId",-1);
     }
 
     public void tranDinero(View view){
         Intent pasarDin = new Intent(this, Transferencia.class);
-        pasarDin.putExtra("NombreUs", nombreUs);
+        pasarDin.putExtra("accountId", accountId);
         //Agregar el numero de cuenta que seleciono en el reciclerview, si no se puede se cambia el recicler mejor
         startActivity(pasarDin);
     }

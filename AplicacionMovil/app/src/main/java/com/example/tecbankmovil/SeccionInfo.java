@@ -18,13 +18,12 @@ public class SeccionInfo extends AppCompatActivity {
     TipoCambio servicioTipoCambio = new TipoCambio(this);
     public Boolean asyncFinished = false;
 
-
-
-
+    private int accountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        accountId = getIntent().getIntExtra("accountId",-1);
 
         servicioTipoCambio.execute("");
 
@@ -56,8 +55,9 @@ public class SeccionInfo extends AppCompatActivity {
         btnSucursal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SeccionInfo.this,MapsActivity.class);
-                startActivity(intent);
+                Intent map = new Intent(SeccionInfo.this,MapsActivity.class);
+                map.putExtra("accountId",accountId);
+                startActivity(map);
             }
         });
 
@@ -65,8 +65,9 @@ public class SeccionInfo extends AppCompatActivity {
         btnBeneficios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SeccionInfo.this,tarjetas.class);
-                startActivity(intent);
+                Intent tarjeta = new Intent(SeccionInfo.this,tarjetas.class);
+                tarjeta.putExtra("accountId",accountId);
+                startActivity(tarjeta);
             }
         });
 

@@ -1,11 +1,15 @@
 package com.example.tecbankmovil;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.roomDatabase.TecbankDatabase;
+import com.example.roomDatabase.models.User;
 
 public class RegistrarUsuario extends AppCompatActivity {
     private EditText nombre, apellido, correo, nombreUs, contrasenna;
@@ -24,14 +28,18 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     public void registrar(View view){
         //Registrar los datos del usuario en la base de datos y verificar si se guardo el usuario bien
-        String validar = "";
-        if(validar.equals("Usuario valido")){
-            Intent mainMenu = new Intent(this, PantallaMenu.class);
-            mainMenu.putExtra("NombreUs",nombreUs.getEditableText().toString());
-            startActivity(mainMenu);
-        }
+        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+        User newUser = new User(correo.getEditableText().toString(), contrasenna.getEditableText().toString(),
+                nombre.getEditableText().toString(),apellido.getEditableText().toString(),
+                nombreUs.getEditableText().toString());
 
+        database.userDao().insert(newUser); // Void function
 
+        LiveData<Integer> user = database.userDao().getUserId(nombreUs.getEditableText().toString(),
+                contrasenna.getEditableText().toString());
 
+        Intent mainMenu = new Intent(this, PantallaMenu.class);
+        mainMenu.putExtra("NombreUs",user.getValue());
+        startActivity(mainMenu);
     }
 }
