@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/drawable/ic_base_credit_card.xml" value="0.1535" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_para_sobres.xml" value="0.371875" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.371875" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.33" />
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.209375" />
-        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.209375" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.33" />
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_menu_sobres.xml" value="0.33" />
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.209375" />
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.33" />
         <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_sucursales_mapa.xml" value="0.209375" />

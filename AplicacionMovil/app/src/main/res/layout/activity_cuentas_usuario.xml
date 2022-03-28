@@ -6,20 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".CuentasUsuario">
 
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="408dp"
+        android:layout_height="107dp"
+        android:scaleX="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
     <TextView
         android:id="@+id/lblCuentasUS"
-        android:layout_width="165dp"
-        android:layout_height="51dp"
+        android:layout_width="209dp"
+        android:layout_height="46dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/archivo_black"
         android:text="Cuentas"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/rcvCuentas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,10 +36,10 @@
         android:id="@+id/rcvCuentas"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblCuentasUS" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
