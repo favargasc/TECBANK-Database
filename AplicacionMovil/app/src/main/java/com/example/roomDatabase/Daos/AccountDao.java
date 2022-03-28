@@ -14,7 +14,7 @@ import java.util.List;
 public interface AccountDao {
 
     // Her goes the querys
-    @Insert (onConflict = OnConflictStrategy.REPLACE)
+    @Insert
     void insert(Account account);
 
     @Query("SELECT * FROM account")

@@ -1,8 +1,6 @@
 package com.example.tecbankmovil;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
 import android.os.AsyncTask;
@@ -17,7 +15,6 @@ import android.content.Intent;
 import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.TecbankDatabase;
-import com.example.roomDatabase.models.User;
 
 import java.util.List;
 
@@ -97,14 +94,14 @@ public class MainActivity extends AppCompatActivity {
         String ingNombre = nombre.getEditableText().toString();
         String ingPassword = password.getEditableText().toString();
 
-        database.userDao().getUserId(ingNombre,ingPassword).observe(this,new Observer<Integer>(){
+        database.userDao().getVerifyUserId(ingNombre,ingPassword).observe(this,new Observer<Integer>(){
 
             @Override
             public void onChanged(Integer id) {
                 System.out.println("Prueba : CHANGE  " + id);
 
                 if (id == null) {
-                    Toast.makeText(MainActivity.this, "Contraseña o Usuario Incorrectos   " + id , Toast.LENGTH_LONG).show(); // No seguro de si funciona
+                    Toast.makeText(MainActivity.this, "Contraseña o Usuario Incorrectos   " + id , Toast.LENGTH_LONG).show();
                     //informar de que se ingreso mal el texto
 
                 } else {
