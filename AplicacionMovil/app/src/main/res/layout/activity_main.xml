@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="409dp"
+        android:layout_height="101dp"
+        android:scaleX="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="103dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoblanco" />
+
     <EditText
         android:id="@+id/ingContra"
         android:layout_width="215dp"
@@ -23,30 +42,27 @@
         android:id="@+id/lblingresar"
         android:layout_width="322dp"
         android:layout_height="36dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="50dp"
-        android:text="Ingreso de usuario"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Iniciar sesión"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
         android:textIsSelectable="false"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblNombreIng"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/registrar"
-        android:layout_width="127dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="133dp"
+        android:layout_width="136dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
         android:onClick="registrarSesion"
         android:text="Registrar"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelregistrar" />
 
@@ -55,11 +71,12 @@
         android:layout_width="216dp"
         android:layout_height="37dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="167dp"
-        android:text="Nombre Usuario"
+        android:text=" Usuario"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblingresar" />
 
@@ -91,14 +108,15 @@
 
     <Button
         android:id="@+id/ingresar"
-        android:layout_width="117dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="133dp"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/red"
+        android:backgroundTint="@color/red"
         android:onClick="iniciarSesion"
         android:text="Ingresar"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:iconTint="@color/redlight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingContra" />
 
@@ -106,13 +124,22 @@
         android:id="@+id/labelregistrar"
         android:layout_width="321dp"
         android:layout_height="34dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
         android:text="Registar Usuario"
         android:textAllCaps="true"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingresar" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="285dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:srcCompat="@drawable/tecbank" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
