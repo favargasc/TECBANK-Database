@@ -43,6 +43,7 @@ public abstract class TecbankDatabase extends RoomDatabase {
 
                             //every time the app uninstall, theres a database destruction
                             .fallbackToDestructiveMigration()
+                            .allowMainThreadQueries()
                             .build();
                 }
             }
