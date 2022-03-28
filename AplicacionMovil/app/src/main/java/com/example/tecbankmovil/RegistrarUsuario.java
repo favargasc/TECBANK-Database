@@ -75,6 +75,7 @@ public class RegistrarUsuario extends AppCompatActivity {
 
         // Error when handling asyncTask, try not to do this if no errors
         Long insertResponse = database.userDao().insert(newUser);
+        //TODO: ASSING NEW ACOUNT
         if (insertResponse != -1){
             succesfullRegister(insertResponse.intValue());
         }

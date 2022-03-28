@@ -1,15 +1,26 @@
 package com.example.tecbankmovil;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.roomDatabase.TecbankDatabase;
+import com.example.roomDatabase.models.Account;
+import com.example.roomDatabase.models.Bank;
+import com.example.roomDatabase.models.User;
 import com.example.tecbankmovil.databinding.ActivityCuentasParaSobresBinding;
+import com.example.utilities.Email;
+
+import java.nio.file.FileSystemAlreadyExistsException;
+import java.util.List;
 
 public class PantallaMenu extends AppCompatActivity {
     private int accountId;
+    public User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +31,25 @@ public class PantallaMenu extends AppCompatActivity {
     }
 
     public void cuentas(View view){
+
+        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+        //database.bankDao().insert(new Bank(1,"TECBANK", "TBNK"));
+
+
+        database.userDao().getUserById(accountId).observe(this,new Observer<User>(){
+
+            @Override
+            public void onChanged(User foundUser) {
+                if(foundUser != null){
+                    user = foundUser;
+                    Email token = new Email(user.email);
+
+                    //Error
+                    //token.send();
+                }
+            }
+        });
+
         Intent cuenta = new Intent(this, CuentasUsuario.class);
         cuenta.putExtra("accountId", accountId);
         startActivity(cuenta);

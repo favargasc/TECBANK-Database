@@ -1,8 +1,6 @@
 package com.example.sqlite_connect;
 
 import com.example.sqlite_connect.controllers.SavingEnvelopeController;
-import org.apache.commons.lang3.RandomStringUtils;
-import com.example.sqlite_connect.utilities.Email;
 import com.example.sqlite_connect.controllers.UserController;
 
 public class Main {

@@ -20,4 +20,7 @@ public interface UserDao {
 
     @Query("SELECT id FROM user u WHERE u.user_name = :userName")
     LiveData<Integer> getUserId(String userName);
+
+    @Query("SELECT * FROM user u WHERE u.id = :userId")
+    LiveData<User> getUserById(int userId);
 }
