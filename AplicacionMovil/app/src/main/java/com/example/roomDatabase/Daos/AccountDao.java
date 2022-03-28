@@ -21,6 +21,6 @@ public interface AccountDao {
     LiveData<List<Account>> getAllAccounts();
 
     @Query("SELECT * FROM account WHERE user_id = :id")
-    LiveData<Account> getAccountByUserId(int id);
+    LiveData<List<Account>> getAccountByUserId(int id);
 
 }

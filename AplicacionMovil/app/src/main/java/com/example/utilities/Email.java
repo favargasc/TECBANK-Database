@@ -1,4 +1,4 @@
-package com.example.sqlite_connect.utilities;
+package com.example.utilities;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -25,7 +25,12 @@ public class Email {
         //https://myaccount.google.com/lesssecureapps
         //https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
+        // tecbankmovilapp@gmail.com
+        //Messages Google
+        //G-317043 es tu cdigo de verificacin de Google.
         final String username = this.from;
+
+        // tecbankmovilapp1!
         final String password = this.password;
 
         Properties props = new Properties();
