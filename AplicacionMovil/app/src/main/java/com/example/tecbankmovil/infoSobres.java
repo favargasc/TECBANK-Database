@@ -41,7 +41,7 @@ public class infoSobres extends AppCompatActivity {
     }
 
     public void crear(){
-        //Registrar los datos del usuario en la base de datos y verificar si se guardo el usuario bien
+        //Registrar el nombre y el monto inicial de un sobre de ahorro
         TecbankDatabase database = TecbankDatabase.getDatabase(this);
 
         //TODO: VALIDAR CONTENIDO
@@ -50,7 +50,7 @@ public class infoSobres extends AppCompatActivity {
                 accountId);
 
 
-        // If user doesnt exist, insert
+        // si el sobre no existe insert
         getSobreIdObserver = new Observer<Integer>() {
             @Override
             public void onChanged(Integer id) {
@@ -69,8 +69,6 @@ public class infoSobres extends AppCompatActivity {
 
     }
     void newSobre(TecbankDatabase database, SavingEnvelope sobre){
-
-
         // Error when handling asyncTask, try not to do this if no errors
         Long insertResponse = database.savingEnvelopeDao().insert(sobre);
         if (insertResponse != -1){
@@ -87,7 +85,6 @@ public class infoSobres extends AppCompatActivity {
         removeGetSobreIdObserver();
         Toast.makeText(getApplicationContext(), "Nuevo usuario: "+ idSobre, Toast.LENGTH_LONG).show();
     }
-
     public void removeGetSobreIdObserver(){
         sobreIdLiveData.removeObservers(this);
     }
