@@ -24,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     public EditText nombre;
     public EditText password;
-    TecbankDatabase database = TecbankDatabase.getDatabase(this);
+    TecbankDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         nombre = (EditText) findViewById(R.id.ingNombre);
         password = (EditText) findViewById(R.id.ingContra);
 
-        TecbankDatabase database = TecbankDatabase.getDatabase(this);
+        database = TecbankDatabase.getDatabase(this);
         //database.bankDao().insert(new Bank(1,"TECBANK", "TBNK"));
 
         database.bankDao().getAllBanks().observe(this,new Observer<List<Bank>>(){
@@ -54,7 +54,24 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
 
-        //myRunnable.run();
+
+        database.bankDao().getAllBanks().observe(this, Banks -> {
+            if (Banks == null || Banks.size() <= 0) {
+                populateDatabase(database);
+            }
+        });
+
+
+        /*SavingEnvelopeController seController = new SavingEnvelopeController();
+
+        UserController uController = new UserController();
+
+        int res = uController.getUserId("lwarhurst0", "Xmj9QM74");
+        System.out.println("PRUEBA: " + res);
+        System.out.println("PRUEBA: " + res);*/
+    }
+
+    static void populateDatabase(TecbankDatabase database){
         new AsyncTask<String,Void,Integer>(){
 
             @Override
@@ -73,16 +90,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }.execute("hello", "otra vara");
 
-
-        /*SavingEnvelopeController seController = new SavingEnvelopeController();
-
-        UserController uController = new UserController();
-
-        int res = uController.getUserId("lwarhurst0", "Xmj9QM74");
-        System.out.println("PRUEBA: " + res);
-        System.out.println("PRUEBA: " + res);*/
-
-
     }
 
     public void iniciarSesion(View view){
@@ -90,18 +97,25 @@ public class MainActivity extends AppCompatActivity {
         String ingNombre = nombre.getEditableText().toString();
         String ingPassword = password.getEditableText().toString();
 
-        LiveData<Integer> user = database.userDao().getUserId(ingNombre,ingPassword);
+        database.userDao().getUserId(ingNombre,ingPassword).observe(this,new Observer<Integer>(){
 
-        if (user.getValue().equals(-1)) {
-            Toast.makeText(MainActivity.this, password.getEditableText(), Toast.LENGTH_SHORT).show(); // No seguro de si funciona
-            //informar de que se ingreso mal el texto
+            @Override
+            public void onChanged(Integer id) {
+                System.out.println("Prueba : CHANGE  " + id);
 
-        } else {
-            Intent pantMenu = new Intent(this, PantallaMenu.class); //Crear la relacion para pasar a otra activity
-            pantMenu.putExtra("accountId", user.getValue()); // Pasar dato por paramatro de una activity a otra, se tiene que pasar el user id
+                if (id == null) {
+                    Toast.makeText(MainActivity.this, "Contraseña o Usuario Incorrectos   " + id , Toast.LENGTH_LONG).show(); // No seguro de si funciona
+                    //informar de que se ingreso mal el texto
 
-            startActivity(pantMenu); // Iniciar la nueva activity
-        }
+                } else {
+                    Intent pantMenu = new Intent(getApplicationContext(), PantallaMenu.class); //Crear la relacion para pasar a otra activity
+                    pantMenu.putExtra("accountId", id); // Pasar dato por paramatro de una activity a otra, se tiene que pasar el user id
+                    startActivity(pantMenu); // Iniciar la nueva activity
+                }
+            }
+        });
+
+
     }
 
     public void registrarSesion(View view){
