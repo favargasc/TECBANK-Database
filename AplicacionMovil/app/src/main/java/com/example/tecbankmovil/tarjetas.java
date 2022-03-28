@@ -1,7 +1,10 @@
 package com.example.tecbankmovil;
 
 import android.os.Bundle;
-
+/*
+* Creacion de la clase Tarjetas, modulo informativo
+* Tipo de tarjeta y beneficios
+* */
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 

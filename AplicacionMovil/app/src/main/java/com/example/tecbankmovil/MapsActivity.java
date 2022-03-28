@@ -19,10 +19,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.tecbankmovil.databinding.ActivityMapsBinding;
-
+/*
+* Clase modulo informativo mapa interactivo Google Maps
+* Muestra las sucursales TECBANK en Costa Rica y los horarios de c/u
+* */
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+
+    private GoogleMap mMap;  //Mapa en donde se va a ubicar las sucusales en Costa Rica
     private ActivityMapsBinding binding;
 
     private int accountId;
@@ -51,10 +55,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(GoogleMap googleMap) {   //Cuando el mapa este disponible, esta funcion corre inmediatamente
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Añade un marcador en el mapa con sus coordenadas correspondientes  indicando el titulo y el horario de cada sucursal
         LatLng AlajuelaCentro = new LatLng(10.012097117212127, -84.21592265422746);
         mMap.addMarker(new MarkerOptions().position(AlajuelaCentro).title("Sucursal TECBANK Alajuela centro").snippet("Horario:"+ "\n" + " L-V 7:00am a 8:00pm" + "\n" + "S-D: 7:00am a 12:00md"));
         LatLng oxigenoMall = new LatLng(9.994062551330842, -84.13133197458215);
@@ -70,7 +74,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public View getInfoWindow(Marker arg0) {
                 return null;
             }
-
+            /*
+            * Actualiza el formato donde se muestran los horarios, para poder visualizarlo correctamente
+            * Se cambia colores a blanco y rojo.
+            * */
             @Override
             public View getInfoContents(Marker marker) {
 
@@ -96,6 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        //Ubica la camara del mapa en la sucursal de Alajuela Centro, con un zoom bajo, para observar otras sucursales
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(AlajuelaCentro,10));
     }
 }
