@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="391dp"
+        android:layout_width="match_parent"
         android:layout_height="122dp"
         android:scaleX="5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="322dp"
+        android:layout_width="match_parent"
         android:layout_height="94dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/archivo_black"
@@ -37,6 +37,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="382dp"
         android:layout_height="637dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="26dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
