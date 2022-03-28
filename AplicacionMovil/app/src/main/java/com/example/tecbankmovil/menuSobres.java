@@ -14,7 +14,7 @@ public class menuSobres extends AppCompatActivity {
     private int cuenta;
     private int savingEnv; //Identificador del sobre seleccionado en el recliclerview
     private EditText dinero;
-    TecbankDatabase database = TecbankDatabase.getDatabase(this);
+    TecbankDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +22,29 @@ public class menuSobres extends AppCompatActivity {
         setContentView(R.layout.activity_menu_sobres);
 
         cuenta = getIntent().getIntExtra("NombreCuenta",0);
+        savingEnv = getIntent().getIntExtra("SavingEnv",-1);
+        database = TecbankDatabase.getDatabase(this);
+
         dinero = (EditText) findViewById(R.id.txtMontoMenuSobre);
     }
 
     public void depositar(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
-        //obtener el id del sobre del reciclerview
         if(monto != 0) {
-            database.savingEnvelopeDao().reduceAccountCB(savingEnv, monto);
-            database.savingEnvelopeDao().receiveMoney(savingEnv, monto);
+            Long updateReduceAccount = database.savingEnvelopeDao().reduceAccountCB(savingEnv, monto);
+            if (updateReduceAccount > 0){
+                Long updateReceiveMoney = database.savingEnvelopeDao().receiveMoney(savingEnv, monto);
+                if(updateReceiveMoney <= 0){ //verifica si se realizo el update
+                    Toast.makeText(getApplicationContext(),
+                            "No fue posible depositar " + savingEnv, Toast.LENGTH_LONG).show();
+                    //Descomentar la siguiente linea por si se quiere devolver el dinero ya que no se realizo el update
+                    //database.savingEnvelopeDao().increaseAccountCB(savingEnv, monto);
+                }
+            }
+            else{
+                Toast.makeText(getApplicationContext(),
+                        "No fue posible depositar " + savingEnv, Toast.LENGTH_LONG).show();
+            }
         }else{
             Toast.makeText(menuSobres.this,"No ingreso el monto", Toast.LENGTH_SHORT).show();
         }
@@ -38,12 +52,24 @@ public class menuSobres extends AppCompatActivity {
 
     public void devolver(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
-        //obtener el id del sobre del reciclerview
         if(monto != 0) {
-            database.savingEnvelopeDao().increaseAccountCB(savingEnv, monto);
-            database.savingEnvelopeDao().returnMoney(savingEnv, monto);
+            Long updateReturnMoney = database.savingEnvelopeDao().returnMoney(savingEnv, monto);
+            if (updateReturnMoney > 0){
+                Long updateIncreaseAccount = database.savingEnvelopeDao().increaseAccountCB(savingEnv, monto);
+                if(updateIncreaseAccount <= 0){ //verifica si se realizo el update
+                    Toast.makeText(getApplicationContext(),
+                            "No fue posible devolver " + savingEnv, Toast.LENGTH_LONG).show();
+                    //Descomentar la siguiente linea por si se quiere devolver el dinero ya que no se realizo el update
+                    //database.savingEnvelopeDao().receiveMoney(savingEnv, monto);
+                }
+            }
+            else{
+                Toast.makeText(getApplicationContext(),
+                        "No fue posible devolver " + savingEnv, Toast.LENGTH_LONG).show();
+            }
         }else{
             Toast.makeText(menuSobres.this,"No ingreso el monto", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

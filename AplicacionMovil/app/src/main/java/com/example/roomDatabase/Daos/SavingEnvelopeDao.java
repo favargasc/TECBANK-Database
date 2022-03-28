@@ -3,6 +3,7 @@ package com.example.roomDatabase.Daos;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.example.roomDatabase.models.Account;
@@ -13,17 +14,17 @@ import java.util.List;
 @Dao
 public interface SavingEnvelopeDao {
 
-  @Insert
-  void insert(SavingEnvelope savingEnvelope);
+  @Insert (onConflict = OnConflictStrategy.REPLACE)
+  Long insert(SavingEnvelope savingEnvelope);
 
   @Query("SELECT * FROM saving_envelope where account_id = :accountId")
   LiveData<List<SavingEnvelope>> getSavingEnvelopeByAccountId(int accountId);
 
   @Query("UPDATE saving_envelope SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
-  void receiveMoney(int savingEnvelopeId, double amount);
+  Long receiveMoney(int savingEnvelopeId, double amount);
 
   @Query("UPDATE saving_envelope SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
-  void returnMoney(int savingEnvelopeId, double amount);
+  Long returnMoney(int savingEnvelopeId, double amount);
 
   @Query("DELETE FROM saving_envelope WHERE id = :savingEnvelopeId")
   void delete(int savingEnvelopeId);
@@ -35,10 +36,13 @@ public interface SavingEnvelopeDao {
   LiveData<SavingEnvelope> getSavingEnvelope(int savingEnvelopeId);
 
   @Query("UPDATE account SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
-  void reduceAccountCB(int savingEnvelopeId, double amount);
+  Long reduceAccountCB(int savingEnvelopeId, double amount);
 
   @Query("UPDATE account SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
-  void increaseAccountCB(int savingEnvelopeId, double amount);
+  Long increaseAccountCB(int savingEnvelopeId, double amount);
+
+  @Query("SELECT id FROM saving_envelope WHERE name = :savEnvName")
+  LiveData<Integer> getSavingEnvelopeId(String savEnvName);
 
 /*  @Query("INSERT INTO saving_envelope_log(amount, date, transaction_type_id) VALUES (:amount, :date, :transactionTypeId)")
   void saveInLog(double amount, String date, int transactionTypeId);
