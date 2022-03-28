@@ -11,7 +11,7 @@ public class Populate {
 
     public static void populateBank(TecbankDatabase database) {
         database.bankDao().insert( new Bank("TECBANK", "TCBK"));
-        database.bankDao().insert( new Bank("D'Amore and Sons", "CYBR"));
+        database.bankDao().insert( new Bank("DAmore and Sons", "CYBR"));
         database.bankDao().insert( new Bank("Leuschke, Harvey and Schulist", "PTIE"));
         database.bankDao().insert( new Bank("Bechtelar-Kuphal", "SYNA"));
         database.bankDao().insert( new Bank("Macejkovic Inc", "DYN.WS"));
