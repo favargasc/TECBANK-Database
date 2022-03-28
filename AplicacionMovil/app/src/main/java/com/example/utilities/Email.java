@@ -9,6 +9,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
+import org.apache.commons.lang3.*;
 
 public class Email {
     String to, from, password, subject, text;
@@ -21,13 +22,20 @@ public class Email {
         this.text = text;
     }
 
+    public Email(String to) {
+        this.to = to;
+        this.from = "tecbankmovilapp@gmail.com";
+        this.password = "tecbankmovilapp1!";
+        this.subject = "TECBANK Transaction Token";
+        this.text = "Desde TECBANK queremos informarle que se esta realizando una transaccion en su cuenta.\n" +
+                "El codigo token para realizar su transaccion sera: " + RandomStringUtils.randomAlphanumeric(20) ;
+    }
+
     public void send() {
         //https://myaccount.google.com/lesssecureapps
         //https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
         // tecbankmovilapp@gmail.com
-        //Messages Google
-        //G-317043 es tu cdigo de verificacin de Google.
         final String username = this.from;
 
         // tecbankmovilapp1!
@@ -48,6 +56,7 @@ public class Email {
 
         Session session = Session.getDefaultInstance(props, auth);
         try {
+            // Error here
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(this.from));
             message.setRecipients(

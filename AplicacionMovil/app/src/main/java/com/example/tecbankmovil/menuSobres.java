@@ -31,9 +31,9 @@ public class menuSobres extends AppCompatActivity {
     public void depositar(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
         if(monto != 0) {
-            Long updateReduceAccount = database.savingEnvelopeDao().reduceAccountCB(savingEnv, monto);
+            int updateReduceAccount = database.savingEnvelopeDao().reduceAccountCB(savingEnv, monto);
             if (updateReduceAccount > 0){
-                Long updateReceiveMoney = database.savingEnvelopeDao().receiveMoney(savingEnv, monto);
+                int updateReceiveMoney = database.savingEnvelopeDao().receiveMoney(savingEnv, monto);
                 if(updateReceiveMoney <= 0){ //verifica si se realizo el update
                     Toast.makeText(getApplicationContext(),
                             "No fue posible depositar " + savingEnv, Toast.LENGTH_LONG).show();
@@ -53,9 +53,9 @@ public class menuSobres extends AppCompatActivity {
     public void devolver(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
         if(monto != 0) {
-            Long updateReturnMoney = database.savingEnvelopeDao().returnMoney(savingEnv, monto);
+            int updateReturnMoney = database.savingEnvelopeDao().returnMoney(savingEnv, monto);
             if (updateReturnMoney > 0){
-                Long updateIncreaseAccount = database.savingEnvelopeDao().increaseAccountCB(savingEnv, monto);
+                int updateIncreaseAccount = database.savingEnvelopeDao().increaseAccountCB(savingEnv, monto);
                 if(updateIncreaseAccount <= 0){ //verifica si se realizo el update
                     Toast.makeText(getApplicationContext(),
                             "No fue posible devolver " + savingEnv, Toast.LENGTH_LONG).show();
