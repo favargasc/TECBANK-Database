@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.TecbankDatabase;
+import com.example.roomDatabase.models.Account;
 import com.example.roomDatabase.models.User;
+
+import org.apache.commons.lang3.RandomStringUtils;
 
 /**
  * The type Registrar usuario.
@@ -25,6 +28,7 @@ public class RegistrarUsuario extends AppCompatActivity {
      * The Get user id observer.
      */
     public Observer<Integer> getUserIdObserver = null;
+    public Observer<Integer> getAccountIdObserver = null;
     /**
      * The User id live data.
      */
@@ -116,6 +120,13 @@ public class RegistrarUsuario extends AppCompatActivity {
      */
     public void succesfullRegister(int idUser){
         removeGetUserIdObserver();
+
+        Account newAccount = new Account(RandomStringUtils.randomAlphanumeric(20),0.0,idUser);
+
+
+
+
+
         Intent mainMenu = new Intent(getApplicationContext(), PantallaMenu.class);
         Toast.makeText(getApplicationContext(), "Nuevo usuario: "+ idUser, Toast.LENGTH_LONG).show();
         mainMenu.putExtra("NombreUs", idUser);

@@ -4,6 +4,7 @@ import com.example.roomDatabase.Daos.BankDao;
 import com.example.roomDatabase.models.Account;
 import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.models.Location;
+import com.example.roomDatabase.models.Proofpayment;
 import com.example.roomDatabase.models.SavingEnvelope;
 import com.example.roomDatabase.models.User;
 
@@ -136,6 +137,7 @@ public class Populate {
      * @param database the database
      */
     public static void populateEnvelopes(TecbankDatabase database){
+    public static void populateEnvelopes(TecbankDatabase database) {
         database.savingEnvelopeDao().insert(new SavingEnvelope("Health Care", 85.7, 15));
         database.savingEnvelopeDao().insert(new SavingEnvelope("n/a", 95.81, 14));
         database.savingEnvelopeDao().insert(new SavingEnvelope("Consumer Durables", 38.07, 11));
@@ -202,10 +204,10 @@ public class Populate {
 
 
 
-
-
-
+    public static void populateTranfers(TecbankDatabase database) {
+        database.proofpaymentDao().insert(new Proofpayment("GL43 3230 1472 6898 07", "GL22 1434 4379 6314 12", 11111111, 95.81, "may many details", 1, 0.0, 1));
     }
+
 
 
 }

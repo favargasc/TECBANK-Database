@@ -15,10 +15,12 @@ public class Proofpayment {
      */
     @PrimaryKey(autoGenerate = true)
     Integer id;
+    //res  = envio
     /**
      * The Res account.
      */
     @ColumnInfo(name = "res_account")
+    //req = recive
     String resAccount;
     /**
      * The Req account.

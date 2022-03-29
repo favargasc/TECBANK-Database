@@ -1,11 +1,11 @@
 package com.example.sqlite_connect.models;
 
-public class Account {
+public class Account2 {
     int id;
     String account_number;
     double current_balance;
 
-    public Account(int id, String account_number, double current_balance) {
+    public Account2(int id, String account_number, double current_balance) {
         this.id = id;
         this.account_number = account_number;
         this.current_balance = current_balance;

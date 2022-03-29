@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.roomDatabase.models.Account;
 import com.example.tecbankmovil.R;
 import com.example.tecbankmovil.RegistrarUsuario;
+import com.example.tecbankmovil.cuentasUsuarioRecyclerViewInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,9 @@ import java.util.List;
  */
 public class UserAccountsAdapter extends RecyclerView.Adapter{
     private List<Account> accountsList;
+    public cuentasUsuarioRecyclerViewInterface userInterface;
+
+    // public constructor for this class
 
     /**
      * Instantiates a new User accounts adapter.
@@ -44,7 +48,6 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
         this.accountsList = accounts;
         notifyDataSetChanged();
     }
-
 
     // Create classes for each layout ViewHolder.
 
@@ -116,6 +119,7 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
                     public void onClick(View view) {
                         Toast.makeText(view.getContext(),
                                 "Hello from Account " + accountsList.get(holder.getAdapterPosition()).getAccount_number(), Toast.LENGTH_SHORT).show();
+                        userInterface.sendToHistorialOnClick(accountsList.get(holder.getAdapterPosition()).getAccount_number());
                     }
                 }
         );

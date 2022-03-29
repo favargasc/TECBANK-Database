@@ -43,4 +43,7 @@ public interface proofOfPaymentDao {
     @Query("select * from proof_of_payment where id_card = :idCard")
     LiveData<List<Proofpayment>> getAllProofofpayment(int idCard);
 
+    @Query("select * from proof_of_payment where req_account = :accountNumber OR res_account = :accountNumber")
+    LiveData<List<Proofpayment>> getAllProofofpaymentByAccountNumber(String accountNumber);
+
 }

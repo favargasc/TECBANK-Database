@@ -23,7 +23,7 @@ public interface AccountDao {
      */
 // Her goes the querys
     @Insert
-    void insert(Account account);
+    Long insert(Account account);
 
     /**
      * Gets all accounts.
@@ -41,5 +41,9 @@ public interface AccountDao {
      */
     @Query("SELECT * FROM account WHERE user_id = :id")
     LiveData<List<Account>> getAccountByUserId(int id);
+
+    @Query("SELECT * FROM account WHERE id = :id")
+    LiveData<Account> getAccountById(int id);
+
 
 }

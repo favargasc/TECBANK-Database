@@ -1,7 +1,7 @@
 package com.example.sqlite_connect.controllers;
 
 import com.example.sqlite_connect.config.DBConnection;
-import com.example.sqlite_connect.models.Account;
+import com.example.sqlite_connect.models.Account2;
 import com.example.sqlite_connect.models.SavingEnvelope;
 
 import java.sql.Connection;
@@ -133,14 +133,14 @@ public class SavingEnvelopeController {
         }
     }
 
-    private Account getAccount(int savingEnvelopeId) {
+    private Account2 getAccount(int savingEnvelopeId) {
         String query =  "SELECT a.id, a.account_number, a.current_balance " +
                         "FROM saving_envelope se " +
                         "INNER JOIN account a " +
                         "ON a.id = se.account_id " +
                         "WHERE se.id = ?";
 
-        Account result = null;
+        Account2 result = null;
 
         try {
             DBConnection dbConnection = new DBConnection();
@@ -151,7 +151,7 @@ public class SavingEnvelopeController {
 
             ResultSet response = statement.executeQuery();
 
-            result = new Account (
+            result = new Account2(
                 response.getInt("id"),
                 response.getString("account_number"),
                 response.getDouble("current_balance")
@@ -200,9 +200,9 @@ public class SavingEnvelopeController {
                         "SET current_balance = current_balance - ? " +
                         "WHERE id = ?";
 
-        Account account = this.getAccount(savingEnvelopeId);
+        Account2 account2 = this.getAccount(savingEnvelopeId);
 
-        if (account == null || account.getCurrent_balance() < amount) return false;
+        if (account2 == null || account2.getCurrent_balance() < amount) return false;
 
         try {
             DBConnection dbConnection = new DBConnection();
@@ -210,7 +210,7 @@ public class SavingEnvelopeController {
             PreparedStatement statement = connection.prepareStatement(query);
 
             statement.setDouble(1, amount);
-            statement.setInt(2, account.getId());
+            statement.setInt(2, account2.getId());
 
             statement.executeUpdate();
 
@@ -228,9 +228,9 @@ public class SavingEnvelopeController {
             "SET current_balance = current_balance + ? " +
             "WHERE id = ?";
 
-        Account account = this.getAccount(savingEnvelopeId);
+        Account2 account2 = this.getAccount(savingEnvelopeId);
 
-        if (account == null) return false;
+        if (account2 == null) return false;
 
         try {
             DBConnection dbConnection = new DBConnection();
@@ -238,7 +238,7 @@ public class SavingEnvelopeController {
             PreparedStatement statement = connection.prepareStatement(query);
 
             statement.setDouble(1, amount);
-            statement.setInt(2, account.getId());
+            statement.setInt(2, account2.getId());
 
             statement.executeUpdate();
 

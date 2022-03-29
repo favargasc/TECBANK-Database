@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The type Cuentas usuario.
  */
-public class CuentasUsuario extends AppCompatActivity {
+public class CuentasUsuario extends AppCompatActivity implements cuentasUsuarioRecyclerViewInterface {
     private int accountId;
     /**
      * The Accounts.
@@ -44,6 +44,9 @@ public class CuentasUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuentas_usuario);
+
+        accountAdapter.userInterface = this;
+
         accountId = getIntent().getIntExtra("accountId",-1);
 
         database = TecbankDatabase.getDatabase(this);
@@ -69,7 +72,15 @@ public class CuentasUsuario extends AppCompatActivity {
 
     }
 
+    @Override
+    public void sendToHistorialOnClick(String accountNumber) {
+        Intent infCuenta = new Intent(this, informacionCuenta.class);
+        infCuenta.putExtra("accountNumber", accountNumber); // Pasar dato por paramatro de una activity a otra, se tiene que pasar el user id
+        startActivity(infCuenta);
 
+
+    }
     // utilizacion del reciclerveiw
     // Unir a informacionCuenta cuando selecione una cuenta en el reciclerveiw
 }
+

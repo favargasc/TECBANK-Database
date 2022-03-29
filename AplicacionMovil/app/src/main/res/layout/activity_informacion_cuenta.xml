@@ -20,7 +20,6 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginStart="106dp"
-        android:layout_marginTop="26dp"
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="42dp"
         android:backgroundTint="@color/red"
@@ -28,8 +27,7 @@
         android:text="Transferir Dinero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rcvHistorialCuenta" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lblHistoriaCuenta"
@@ -62,14 +60,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvHistorialCuenta"
-        android:layout_width="409dp"
-        android:layout_height="451dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/trnDinero"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblHistoriaCuenta" />
+        app:layout_constraintTop_toBottomOf="@+id/lblHistoriaCuenta"
+        app:layout_constraintVertical_bias="0.123" />
 
     <ImageView
         android:id="@+id/imageView24"

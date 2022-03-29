@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 Populate.populateUser(database);
                 Populate.populateAccount(database);
                 Populate.populateEnvelopes(database);
+                Populate.populateTranfers(database);
                 //database.bankDao().getBankById("46");
 
                 // not working?

@@ -16,7 +16,7 @@ import com.example.roomDatabase.TecbankDatabase;
  * The type Transferencia.
  */
 public class Transferencia extends AppCompatActivity {
-    private int accountId;
+    private String accountId;
     private EditText numCuenta, monto, cedula;
 
     /**
@@ -39,7 +39,7 @@ public class Transferencia extends AppCompatActivity {
 
         setContentView(R.layout.activity_transferencia);
 
-        accountId = getIntent().getIntExtra("accountId",-1);
+        accountId = getIntent().getStringExtra("accountId");
 
         numCuenta = (EditText) findViewById(R.id.eTxtNumCuenta);
         monto = (EditText) findViewById(R.id.eTxtMontoTran);
