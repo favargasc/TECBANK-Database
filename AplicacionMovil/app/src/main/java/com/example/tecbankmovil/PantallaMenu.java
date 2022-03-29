@@ -6,6 +6,8 @@ import androidx.lifecycle.Observer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.roomDatabase.TecbankDatabase;
 import com.example.roomDatabase.models.Account;
@@ -39,14 +41,6 @@ public class PantallaMenu extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_menu);
 
         accountId = getIntent().getIntExtra("accountId",-1);
-    }
-
-    /**
-     * Cuentas.
-     *
-     * @param view the view
-     */
-    public void cuentas(View view){
 
         TecbankDatabase database = TecbankDatabase.getDatabase(this);
         //database.bankDao().insert(new Bank(1,"TECBANK", "TBNK"));
@@ -59,12 +53,27 @@ public class PantallaMenu extends AppCompatActivity {
                 if(foundUser != null){
                     user = foundUser;
                     Email token = new Email(user.email);
+                    TextView text_name = null;
+                    text_name = (TextView)findViewById(R.id.Nombre);
+                    text_name.setText(user.name + " " + user.lastName);
+
 
                     //Error
                     //token.send();
                 }
             }
         });
+
+    }
+
+    /**
+     * Cuentas.
+     *
+     * @param view the view
+     */
+    public void cuentas(View view){
+
+
 
         Intent cuenta = new Intent(this, CuentasUsuario.class);
         cuenta.putExtra("accountId", accountId);

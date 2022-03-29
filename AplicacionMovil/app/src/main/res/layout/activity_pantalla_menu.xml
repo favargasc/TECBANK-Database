@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 
     <Button
         android:id="@+id/btnInfo"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnTrans" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Nombre"
         android:layout_width="221dp"
         android:layout_height="66dp"
         android:layout_marginStart="24dp"
@@ -103,7 +103,7 @@
         android:layout_marginEnd="16dp"
         android:onClick="cerrarSesion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/Nombre"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logout" />
 
@@ -116,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:srcCompat="@drawable/logorojo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

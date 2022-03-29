@@ -21,7 +21,7 @@ public class cuentasParaSobres extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuentas_para_sobres);
+        setContentView(R.layout.activity_menu_sobres);
 
         accountId = getIntent().getIntExtra("accountId",-1);
 

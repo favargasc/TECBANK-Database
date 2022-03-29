@@ -15,9 +15,12 @@ import android.widget.Toast;
 import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.TecbankDatabase;
 import com.example.roomDatabase.models.Account;
+import com.example.roomDatabase.models.Proofpayment;
 import com.example.roomDatabase.models.User;
 
 import org.apache.commons.lang3.RandomStringUtils;
+
+import java.util.List;
 
 /**
  * The type Registrar usuario.
@@ -33,6 +36,7 @@ public class RegistrarUsuario extends AppCompatActivity {
      * The User id live data.
      */
     public LiveData<Integer> userIdLiveData;
+    public LiveData<Integer> accountIdLiveData;
 
     /**
      * On create.
@@ -104,7 +108,7 @@ public class RegistrarUsuario extends AppCompatActivity {
         Long insertResponse = database.userDao().insert(newUser);
         //TODO: ASSING NEW ACOUNT
         if (insertResponse != -1){
-            succesfullRegister(insertResponse.intValue());
+            succesfullRegister(insertResponse.intValue(), database);
         }
         else{
             Toast.makeText(getApplicationContext(), "No fue posible registrar al usuario", Toast.LENGTH_LONG).show();
@@ -113,23 +117,51 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     }
 
+
+    void newAccount(TecbankDatabase database, Account newAccount){
+
+
+        // Error when handling asyncTask, try not to do this if no errors
+        Long insertResponse = database.accountDao().insert(newAccount);
+        if (insertResponse != -1){
+            Toast.makeText(getApplicationContext(), "Su nueva cuenta ha sido registrada!", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "No fue posible registrar su cuenta", Toast.LENGTH_LONG).show();
+        }
+    }
+
     /**
      * Succesfull register.
      *
      * @param idUser the id user
      */
-    public void succesfullRegister(int idUser){
+    public void succesfullRegister(int idUser, TecbankDatabase database){
+
         removeGetUserIdObserver();
 
         Account newAccount = new Account(RandomStringUtils.randomAlphanumeric(20),0.0,idUser);
 
+        getAccountIdObserver = new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer id) {
+                if(id == null) {
+                    newAccount(database,newAccount);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Nueva cuenta creada!" , Toast.LENGTH_LONG).show();
+                }
+                removeGetUserIdObserver();
+            }
+        };
+
+        accountIdLiveData = database.accountDao().getAccountIdByNumber(newAccount.account_number);
+        accountIdLiveData.observe(this, getAccountIdObserver);
 
 
-
-
-        Intent mainMenu = new Intent(getApplicationContext(), PantallaMenu.class);
+        Intent mainMenu = new Intent(getApplicationContext(), MainActivity.class);
         Toast.makeText(getApplicationContext(), "Nuevo usuario: "+ idUser, Toast.LENGTH_LONG).show();
-        mainMenu.putExtra("NombreUs", idUser);
+        //mainMenu.putExtra("NombreUs", idUser);
         startActivity(mainMenu);
 
     }

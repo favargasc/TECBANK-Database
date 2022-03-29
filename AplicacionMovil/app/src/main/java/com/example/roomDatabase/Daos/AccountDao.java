@@ -45,5 +45,12 @@ public interface AccountDao {
     @Query("SELECT * FROM account WHERE id = :id")
     LiveData<Account> getAccountById(int id);
 
+    @Query("SELECT id FROM account WHERE account_number = :number")
+    LiveData<Integer> getAccountIdByNumber(String number);
+
+    @Query("SELECT id FROM account WHERE user_id = :userId")
+    LiveData<Integer> getAccountIdByUserId(int userId);
+
+
 
 }
