@@ -39,18 +39,17 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="331dp"
-        android:layout_height="72dp"
+        android:layout_width="257dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
         android:fontFamily="@font/archivo_black"
         android:text="@string/SeccionInfo"
         android:textColor="#050505"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.483"
+        app:layout_constraintVertical_bias="0.481"
         tools:text="Información" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -226,6 +225,14 @@
             app:layout_constraintTop_toBottomOf="@+id/btnSucursales" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="118dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/logoblanco"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

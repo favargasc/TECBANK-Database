@@ -20,14 +20,14 @@ public class Proofpayment {
     @ColumnInfo(name = "detail")
     String detail;
     @ColumnInfo(name = "transaction_type_id")
-    TransactionType transactionTypeId;
+    Integer transactionTypeId;
     @ColumnInfo(name = "commission")
     Double commission;
     @ColumnInfo(name = "bank_id")
     Integer bankId;
 
     @Ignore
-    public Proofpayment(Integer id, String resAccount, String reqAccount, Integer idCard, Double amount, String detail, TransactionType transactionTypeId, Double commission, Integer bankId) {
+    public Proofpayment(Integer id, String resAccount, String reqAccount, Integer idCard, Double amount, String detail, Integer transactionTypeId, Double commission, Integer bankId) {
         this.id = id;
         this.resAccount = resAccount;
         this.reqAccount = reqAccount;
@@ -39,7 +39,7 @@ public class Proofpayment {
         this.bankId = bankId;
     }
 
-    public Proofpayment(String resAccount, String reqAccount, Integer idCard, Double amount, String detail, TransactionType transactionTypeId, Double commission, Integer bankId) {
+    public Proofpayment(String resAccount, String reqAccount, Integer idCard, Double amount, String detail, Integer transactionTypeId, Double commission, Integer bankId) {
         this.resAccount = resAccount;
         this.reqAccount = reqAccount;
         this.idCard = idCard;
@@ -78,7 +78,7 @@ public class Proofpayment {
         return detail;
     }
 
-    public TransactionType getTransactionTypeId() {
+    public Integer getTransactionTypeId() {
         return transactionTypeId;
     }
 

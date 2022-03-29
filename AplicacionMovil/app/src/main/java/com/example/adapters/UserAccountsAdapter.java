@@ -1,5 +1,6 @@
 package com.example.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.roomDatabase.models.Account;
 import com.example.tecbankmovil.R;
+import com.example.tecbankmovil.RegistrarUsuario;
 
 import java.util.ArrayList;
 import java.util.List;

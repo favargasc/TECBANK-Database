@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarUsuario">
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="407dp"
+        android:layout_height="100dp"
+        android:scaleX="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
     <EditText
         android:id="@+id/regNombreV"
         android:layout_width="130dp"
@@ -21,22 +30,6 @@
         app:layout_constraintTop_toBottomOf="@+id/lblNombreReg" />
 
     <TextView
-        android:id="@+id/lblRegistro"
-        android:layout_width="358dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="13dp"
-        android:text="Registrarse"
-        android:textAllCaps="true"
-        android:textDirection="firstStrongRtl"
-        android:textIsSelectable="false"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/lblCorreoReg"
         android:layout_width="340dp"
         android:layout_height="40dp"
@@ -48,6 +41,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regNombreV" />
+
+    <TextView
+        android:id="@+id/lblRegistro"
+        android:layout_width="272dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Registrarse"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/regCorreo"
@@ -152,9 +160,21 @@
         android:layout_marginTop="51dp"
         android:layout_marginEnd="142dp"
         android:layout_marginBottom="76dp"
+        android:background="@drawable/fondondulado"
+        android:backgroundTint="@color/red"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regContra" />
+        app:layout_constraintTop_toBottomOf="@+id/regContra"
+        app:strokeColor="@color/red" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="105dp"
+        android:layout_height="94dp"
+        app:layout_constraintStart_toEndOf="@+id/lblRegistro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoblanco" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

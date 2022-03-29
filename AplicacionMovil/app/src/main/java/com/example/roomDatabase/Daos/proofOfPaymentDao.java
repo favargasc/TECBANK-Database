@@ -11,6 +11,7 @@ import com.example.roomDatabase.models.SavingEnvelope;
 
 import java.util.List;
 
+@Dao
 public interface proofOfPaymentDao {
 
     @Insert (onConflict = OnConflictStrategy.REPLACE)

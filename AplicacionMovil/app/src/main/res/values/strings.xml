@@ -11,4 +11,16 @@
     <string name="sucursales">Sucursales</string>
     <string name="Tarjetas">Tarjetas TECBANK</string>
     <string name="Beneficios">Beneficios TECBANK</string>
+    <string-array name="banks_array">
+        <item>TECBANK</item>
+        <item>DAmore and Sons</item>
+        <item>Leuschke, Harvey and Schulist</item>
+        <item>Bechtelar-Kuphal </item>
+        <item>Macejkovic Inc</item>
+        <item>Block, Mosciski and Streich</item>
+        <item>Sporer-Christiansen</item>
+        <item>Mraz Inc</item>
+
+    </string-array>
+
 </resources>
