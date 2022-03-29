@@ -201,7 +201,7 @@
             android:id="@+id/btnSucursales"
             android:layout_width="329dp"
             android:layout_height="65dp"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
             android:fontFamily="@font/archivo_black"
             android:text="@string/sucursales"
             android:textColor="#040404"
@@ -216,7 +216,7 @@
             android:layout_height="65dp"
             android:layout_marginTop="20dp"
             android:autoText="false"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
             android:fontFamily="@font/archivo_black"
             android:text="@string/Tarjetas"
             android:textColor="#040404"
@@ -230,9 +230,10 @@
         android:id="@+id/imageView16"
         android:layout_width="118dp"
         android:layout_height="109dp"
-        app:srcCompat="@drawable/logoblanco"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="2dp" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoblanco" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

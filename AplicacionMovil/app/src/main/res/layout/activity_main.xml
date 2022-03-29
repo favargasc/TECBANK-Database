@@ -61,6 +61,7 @@
         android:layout_height="49dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
+        android:backgroundTint="@color/red"
         android:onClick="registrarSesion"
         android:text="Registrar"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,13 +111,11 @@
         android:id="@+id/ingresar"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/red"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="@color/red"
         android:onClick="iniciarSesion"
         android:text="Ingresar"
-        app:iconTint="@color/redlight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingContra" />
 

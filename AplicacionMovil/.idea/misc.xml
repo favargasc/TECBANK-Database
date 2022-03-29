@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_para_sobres.xml" value="0.17229585292860197" />
-        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.16673792218896966" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/drawable/ic_base_credit_card.xml" value="0.1535" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_para_sobres.xml" value="0.25" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_cuentas_usuario.xml" value="0.371875" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.33" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.209375" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.33" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_menu_sobres.xml" value="0.33" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_pantalla_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.33" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_sucursales_mapa.xml" value="0.209375" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_card.xml" value="0.209375" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/seccion_info.xml" value="0.25" />
+        <entry key="..\:/Users/Javier Rivera/Desktop/TEC/Requi/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/tarjetas.xml" value="0.209375" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_info_sobres.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_informacion_cuenta.xml" value="0.20521590423257802" />
@@ -15,11 +27,10 @@
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_registrar_usuario.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_sucursales_mapa.xml" value="0.1" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/activity_transferencia.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_account.xml" value="0.2792207792207792" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_account.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_card.xml" value="0.1" />
-        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/recycler_view_transferencia.xml" value="0.4" />
         <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/seccion_info.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/tarjetas.xml" value="0.264" />
+        <entry key="..\:/Users/anagu/OneDrive/Documentos/TEC/SemestreI2022/Requerimientos/GilbertsBranch/TECBANK-Database/AplicacionMovil/app/src/main/res/layout/tarjetas.xml" value="0.1" />
       </map>
     </option>
   </component>

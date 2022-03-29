@@ -154,20 +154,18 @@
 
     <Button
         android:id="@+id/btnRegistrarUs"
-        android:layout_width="127dp"
-        android:layout_height="48dp"
+        android:layout_width="138dp"
+        android:layout_height="53dp"
         android:layout_marginStart="142dp"
         android:layout_marginTop="51dp"
         android:layout_marginEnd="142dp"
         android:layout_marginBottom="76dp"
-        android:background="@drawable/fondondulado"
         android:backgroundTint="@color/red"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regContra"
-        app:strokeColor="@color/red" />
+        app:layout_constraintTop_toBottomOf="@+id/regContra" />
 
     <ImageView
         android:id="@+id/imageView14"

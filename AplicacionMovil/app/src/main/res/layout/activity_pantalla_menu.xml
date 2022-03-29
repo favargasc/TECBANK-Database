@@ -14,14 +14,16 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="54dp"
+        android:backgroundTint="@color/red"
         android:onClick="cerrarSesion"
         android:text="Cerrar Sesión"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnInfo"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.661" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -37,14 +39,14 @@
         android:layout_width="300dp"
         android:layout_height="110dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="56dp"
-        android:background="@color/red"
         android:backgroundTint="@color/red"
         android:onClick="cuentas"
         android:text="Cuentas"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -55,6 +57,7 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/red"
         android:onClick="informacion"
         android:text="Informacion"
         android:textSize="24sp"
@@ -70,6 +73,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/red"
         android:onClick="sobres"
         android:text="Sobres"
         android:textSize="24sp"
@@ -105,14 +109,14 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="108dp"
-        android:layout_height="100dp"
+        android:layout_width="91dp"
+        android:layout_height="84dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/logorojo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
