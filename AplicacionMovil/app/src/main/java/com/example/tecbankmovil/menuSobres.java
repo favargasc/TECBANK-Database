@@ -9,12 +9,20 @@ import android.widget.Toast;
 
 import com.example.sqlite_connect.controllers.SavingEnvelopeController;
 
+/**
+ * The type Menu sobres.
+ */
 public class menuSobres extends AppCompatActivity {
 
     private int cuenta;
     private SavingEnvelopeController seController = new SavingEnvelopeController();
     private EditText dinero;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +32,11 @@ public class menuSobres extends AppCompatActivity {
         dinero = (EditText) findViewById(R.id.txtMontoMenuSobre);
     }
 
+    /**
+     * Depositar.
+     *
+     * @param view the view
+     */
     public void depositar(View view){
         String monto = dinero.getEditableText().toString();
         if(monto != "") {
@@ -33,6 +46,11 @@ public class menuSobres extends AppCompatActivity {
         }
     }
 
+    /**
+     * Devolver.
+     *
+     * @param view the view
+     */
     public void devolver(View view){
         String monto = dinero.getEditableText().toString();
         if(monto != "") {

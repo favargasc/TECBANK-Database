@@ -7,9 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+/**
+ * The type Registrar usuario.
+ */
 public class RegistrarUsuario extends AppCompatActivity {
     private EditText nombre, apellido, correo, nombreUs, contrasenna;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +30,11 @@ public class RegistrarUsuario extends AppCompatActivity {
         contrasenna = (EditText) findViewById(R.id.regContra);
     }
 
+    /**
+     * Registrar.
+     *
+     * @param view the view
+     */
     public void registrar(View view){
         //Registrar los datos del usuario en la base de datos y verificar si se guardo el usuario bien
         String validar = "";

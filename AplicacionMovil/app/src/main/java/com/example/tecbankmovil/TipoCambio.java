@@ -17,7 +17,9 @@ import java.io.*;
 import java.util.*;
 
 
-
+/**
+ * The type Tipo cambio.
+ */
 public class TipoCambio extends AsyncTask<String, String, String> {
 
     private SeccionInfo mActivity;
@@ -26,9 +28,21 @@ public class TipoCambio extends AsyncTask<String, String, String> {
     private int indicador = 0; //317: Compra, 318: Venta
     private String tcFechaInicio;
     private String tcFechaFinal;
+    /**
+     * The Cambio venta dolar.
+     */
     public String cambioVentaDolar = "" ;
+    /**
+     * The Cambio compra dolar.
+     */
     public String cambioCompraDolar = "";
+    /**
+     * The Cambio venta euro.
+     */
     public String cambioVentaEuro = "" ;
+    /**
+     * The Cambio compra euro.
+     */
     public String cambioCompraEuro = "";
     private final String tcNombre = "Javier Rivera Madrigal";
     private final String tnSubNiveles = "N";
@@ -39,14 +53,23 @@ public class TipoCambio extends AsyncTask<String, String, String> {
     private final String VALUE_TAG = "NUM_VALOR";
     //gee.bccr.fi.cr/Indicadores/Suscripciones/WS/wsindicadoreseconomicos.asmx/ObtenerIndicadoresEconomicosXML HTTP/1.1
 
+    /**
+     * Instantiates a new Tipo cambio.
+     *
+     * @param mActivity the m activity
+     */
     public TipoCambio(SeccionInfo mActivity){
         this.mActivity = mActivity;
         setFecha();
     }
 
 
-
-
+    /**
+     * Do in background string.
+     *
+     * @param strings the strings
+     * @return the string
+     */
     @Override
     protected String doInBackground(String... strings) {
         getCompra();
@@ -79,6 +102,11 @@ public class TipoCambio extends AsyncTask<String, String, String> {
     }
 
 
+    /**
+     * On post execute.
+     *
+     * @param s the s
+     */
     @Override
     protected void onPostExecute(String s) {
         mActivity.asyncFinished = true;
@@ -86,6 +114,7 @@ public class TipoCambio extends AsyncTask<String, String, String> {
 
     /**
      * Devuelve el valor de <strong>COMPRA</strong> USD del BCCR
+     *
      * @return <code>Double</code> con el valor del precio de compra.
      */
     public double getCompra(){
@@ -96,6 +125,7 @@ public class TipoCambio extends AsyncTask<String, String, String> {
 
     /**
      * Devuelve el valor de <strong>VENTA</strong> USD del BCCR
+     *
      * @return <code>Double</code> con el valor del precio de venta.
      */
     public double getVenta(){
@@ -104,6 +134,11 @@ public class TipoCambio extends AsyncTask<String, String, String> {
         return 0;
     }
 
+    /**
+     * Get euro double.
+     *
+     * @return the double
+     */
     public double getEuro(){
         setEuro();
         //double valor = Double.parseDouble();

@@ -19,19 +19,57 @@ import com.example.roomDatabase.models.Location;
 import com.example.roomDatabase.models.SavingEnvelope;
 import com.example.roomDatabase.models.User;
 
+/**
+ * The type Tecbank database.
+ */
 // entities = tables, version = the rollback prevision
 // if migration error, erase app from phone, and run again
 @Database(entities = {Bank.class, Account.class, Location.class, User.class, SavingEnvelope.class} , version = 1)
 public abstract class TecbankDatabase extends RoomDatabase {
 
+    /**
+     * Bank dao bank dao.
+     *
+     * @return the bank dao
+     */
     public abstract BankDao bankDao();
+
+    /**
+     * Account dao account dao.
+     *
+     * @return the account dao
+     */
     public abstract AccountDao accountDao();
+
+    /**
+     * Location dao location dao.
+     *
+     * @return the location dao
+     */
     public abstract LocationDao locationDao();
+
+    /**
+     * User dao user dao.
+     *
+     * @return the user dao
+     */
     public abstract UserDao userDao();
+
+    /**
+     * Saving envelope dao saving envelope dao.
+     *
+     * @return the saving envelope dao
+     */
     public abstract SavingEnvelopeDao savingEnvelopeDao();
 
     private static TecbankDatabase INSTANCE;
 
+    /**
+     * Gets database.
+     *
+     * @param context the context
+     * @return the database
+     */
     public static TecbankDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (TecbankDatabase.class) {

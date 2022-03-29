@@ -20,10 +20,24 @@ import com.example.roomDatabase.TecbankDatabase;
 
 import java.util.List;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * The Nombre.
+     */
     public EditText nombre;
+    /**
+     * The Password.
+     */
     public EditText password;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Iniciar sesion.
+     *
+     * @param view the view
+     */
     public void iniciarSesion(View view){
 
         String ingNombre = nombre.getEditableText().toString();
@@ -103,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Registrar sesion.
+     *
+     * @param view the view
+     */
     public void registrarSesion(View view){
         Intent registrarUs = new Intent(this, RegistrarUsuario.class);
         startActivity(registrarUs);

@@ -11,17 +11,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 
-
-
-
+/**
+ * The type Seccion info.
+ */
 public class SeccionInfo extends AppCompatActivity {
+    /**
+     * The Servicio tipo cambio.
+     */
     TipoCambio servicioTipoCambio = new TipoCambio(this);
+    /**
+     * The Async finished.
+     */
     public Boolean asyncFinished = false;
 
 
-
-
-
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -6,8 +6,18 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
+/**
+ * The type Get method.
+ */
 public class GetMethod {
 
+    /**
+     * Gets html.
+     *
+     * @param urlToRead the url to read
+     * @return the html
+     * @throws Exception the exception
+     */
     protected static String getHTML(String urlToRead) throws Exception {
         StringBuilder result = new StringBuilder();
         URL url = new URL(urlToRead);

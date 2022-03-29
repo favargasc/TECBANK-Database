@@ -10,9 +10,36 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
+/**
+ * The type Email.
+ */
 public class Email {
-    String to, from, password, subject, text;
+    /**
+     * The To.
+     */
+    String to, /**
+     * The From.
+     */
+    from, /**
+     * The Password.
+     */
+    password, /**
+     * The Subject.
+     */
+    subject, /**
+     * The Text.
+     */
+    text;
 
+    /**
+     * Instantiates a new Email.
+     *
+     * @param to       the to
+     * @param from     the from
+     * @param password the password
+     * @param subject  the subject
+     * @param text     the text
+     */
     public Email(String to, String from, String password, String subject, String text) {
         this.to = to;
         this.from = from;
@@ -21,6 +48,9 @@ public class Email {
         this.text = text;
     }
 
+    /**
+     * Send.
+     */
     public void send() {
         //https://myaccount.google.com/lesssecureapps
         //https://accounts.google.com/b/0/DisplayUnlockCaptcha

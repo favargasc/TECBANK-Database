@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.io.StringReader;
 
 
+/**
+ * The type Xml parser.
+ */
 public class XmlParser {
 
     private String xml;
@@ -21,10 +24,11 @@ public class XmlParser {
 
     /**
      * Constructor del <code>XmlParser</code> encargado de definir las herramientas para parseo de XML
+     *
      * @param data Documento XML
-     * @throws SAXException
-     * @throws IOException
-     * @throws ParserConfigurationException
+     * @throws SAXException                 the sax exception
+     * @throws IOException                  the io exception
+     * @throws ParserConfigurationException the parser configuration exception
      */
     public XmlParser(String data) throws SAXException, IOException, ParserConfigurationException{
         //Reemplaza caracteres especiales
@@ -40,6 +44,7 @@ public class XmlParser {
 
     /**
      * Obtiene el valor de una etiqueta en un documento XML
+     *
      * @param tag La etiqueta del cual extraer el valor
      * @return <code>String</code> con el valor de la etiqueta enviada por parámetro
      */

@@ -10,34 +10,89 @@ import com.example.roomDatabase.models.SavingEnvelope;
 
 import java.util.List;
 
+/**
+ * The interface Saving envelope dao.
+ */
 @Dao
 public interface SavingEnvelopeDao {
 
-  @Insert
+    /**
+     * Insert.
+     *
+     * @param savingEnvelope the saving envelope
+     */
+    @Insert
   void insert(SavingEnvelope savingEnvelope);
 
-  @Query("SELECT * FROM saving_envelope where account_id = :accountId")
+    /**
+     * Gets saving envelope by account id.
+     *
+     * @param accountId the account id
+     * @return the saving envelope by account id
+     */
+    @Query("SELECT * FROM saving_envelope where account_id = :accountId")
   LiveData<List<SavingEnvelope>> getSavingEnvelopeByAccountId(int accountId);
 
-  @Query("UPDATE saving_envelope SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
+    /**
+     * Receive money.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @param amount           the amount
+     */
+    @Query("UPDATE saving_envelope SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
   void receiveMoney(int savingEnvelopeId, double amount);
 
-  @Query("UPDATE saving_envelope SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
+    /**
+     * Return money.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @param amount           the amount
+     */
+    @Query("UPDATE saving_envelope SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
   void returnMoney(int savingEnvelopeId, double amount);
 
-  @Query("DELETE FROM saving_envelope WHERE id = :savingEnvelopeId")
+    /**
+     * Delete.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     */
+    @Query("DELETE FROM saving_envelope WHERE id = :savingEnvelopeId")
   void delete(int savingEnvelopeId);
 
-  @Query("SELECT a.id, a.account_number, a.current_balance, a.user_id FROM saving_envelope se INNER JOIN account a ON a.id = se.account_id WHERE se.id = :savingEnvelopeId")
+    /**
+     * Gets account.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @return the account
+     */
+    @Query("SELECT a.id, a.account_number, a.current_balance, a.user_id FROM saving_envelope se INNER JOIN account a ON a.id = se.account_id WHERE se.id = :savingEnvelopeId")
   LiveData<Account> getAccount(int savingEnvelopeId);
 
-  @Query("select id, name, current_balance from saving_envelope where id = :savingEnvelopeId")
+    /**
+     * Gets saving envelope.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @return the saving envelope
+     */
+    @Query("select id, name, current_balance from saving_envelope where id = :savingEnvelopeId")
   LiveData<SavingEnvelope> getSavingEnvelope(int savingEnvelopeId);
 
-  @Query("UPDATE account SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
+    /**
+     * Reduce account cb.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @param amount           the amount
+     */
+    @Query("UPDATE account SET current_balance = current_balance - :amount WHERE id = :savingEnvelopeId")
   void reduceAccountCB(int savingEnvelopeId, double amount);
 
-  @Query("UPDATE account SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
+    /**
+     * Increase account cb.
+     *
+     * @param savingEnvelopeId the saving envelope id
+     * @param amount           the amount
+     */
+    @Query("UPDATE account SET current_balance = current_balance + :amount WHERE id = :savingEnvelopeId")
   void increaseAccountCB(int savingEnvelopeId, double amount);
 
 /*  @Query("INSERT INTO saving_envelope_log(amount, date, transaction_type_id) VALUES (:amount, :date, :transactionTypeId)")
