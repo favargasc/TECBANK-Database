@@ -14,6 +14,7 @@ import com.example.roomDatabase.TecbankDatabase;
 import com.example.roomDatabase.models.Account;
 import com.example.roomDatabase.models.Bank;
 import com.example.tecbankmovil.databinding.RecyclerViewAccountBinding;
+import com.example.utilities.globalUserData;
 
 import java.util.List;
 
@@ -22,6 +23,7 @@ import java.util.List;
  */
 public class CuentasUsuario extends AppCompatActivity implements cuentasUsuarioRecyclerViewInterface {
     private int accountId;
+    private int userId;
     /**
      * The Accounts.
      */
@@ -48,6 +50,10 @@ public class CuentasUsuario extends AppCompatActivity implements cuentasUsuarioR
         accountAdapter.userInterface = this;
 
         accountId = getIntent().getIntExtra("accountId",-1);
+        userId = getIntent().getIntExtra("accountId",-1);
+        Toast.makeText(getApplicationContext(), "accountId " + accountId , Toast.LENGTH_LONG).show();
+
+
 
         database = TecbankDatabase.getDatabase(this);
         //database.bankDao().insert(new Bank(1,"TECBANK", "TBNK"));
@@ -56,7 +62,7 @@ public class CuentasUsuario extends AppCompatActivity implements cuentasUsuarioR
         recyclerView.setAdapter(accountAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        database.accountDao().getAccountByUserId(accountId).observe(this,new Observer<List<Account>>(){
+        database.accountDao().getAccountByUserId(globalUserData.getInstance().getUserId()).observe(this,new Observer<List<Account>>(){
 
             @Override
             public void onChanged(List<Account> userAccounts) {
@@ -64,12 +70,11 @@ public class CuentasUsuario extends AppCompatActivity implements cuentasUsuarioR
                     Toast.makeText(getApplicationContext(), "El usuario no tiene cuentas Activas " , Toast.LENGTH_LONG).show();
                     //informar de que se ingreso mal el texto
                 } else {
+                    accounts = userAccounts;
                     accountAdapter.updateAdapter(userAccounts);
                 }
             }
         });
-
-
     }
 
     @Override

@@ -15,6 +15,7 @@ import android.content.Intent;
 import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.models.Bank;
 import com.example.roomDatabase.TecbankDatabase;
+import com.example.utilities.globalUserData;
 
 import java.util.List;
 
@@ -112,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     /**
      * Iniciar sesion.
      *
@@ -135,10 +137,13 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Intent pantMenu = new Intent(getApplicationContext(), PantallaMenu.class); //Crear la relacion para pasar a otra activity
                     pantMenu.putExtra("accountId", id); // Pasar dato por paramatro de una activity a otra, se tiene que pasar el user id
+                    globalUserData.getInstance().setUserId(id);
                     startActivity(pantMenu); // Iniciar la nueva activity
                 }
             }
         });
+
+
 
 
     }

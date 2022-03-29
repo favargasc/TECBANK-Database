@@ -21,6 +21,7 @@ import java.util.List;
  */
 public class informacionCuenta extends AppCompatActivity {
     private String accountNumber;
+    private int accountid;
     transferAccountAdapter trasferAdapter = new transferAccountAdapter();
     TecbankDatabase database;
 
@@ -35,6 +36,8 @@ public class informacionCuenta extends AppCompatActivity {
 
         setContentView(R.layout.activity_informacion_cuenta);
         accountNumber = getIntent().getStringExtra("accountNumber");
+        accountid = getIntent().getIntExtra("accountId", -1);
+
 
         RecyclerView recyclerView = findViewById(R.id.rcvHistorialCuenta);
         recyclerView.setAdapter(trasferAdapter);
@@ -68,6 +71,7 @@ public class informacionCuenta extends AppCompatActivity {
 
         //do we need this
         pasarDin.putExtra("accountId", accountNumber);
+        pasarDin.putExtra("accountId", accountid);
         //Agregar el numero de cuenta que seleciono en el reciclerview, si no se puede se cambia el recicler mejor
         startActivity(pasarDin);
     }

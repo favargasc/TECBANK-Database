@@ -28,6 +28,10 @@ public class Transferencia extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_transferencia);
+        accountId = getIntent().getStringExtra("accountId");
+        accountId = getIntent().getStringExtra("accountId");
+
         Spinner spinner = (Spinner) findViewById(R.id.spnBancos);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -36,10 +40,6 @@ public class Transferencia extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
-
-        setContentView(R.layout.activity_transferencia);
-
-        accountId = getIntent().getStringExtra("accountId");
 
         numCuenta = (EditText) findViewById(R.id.eTxtNumCuenta);
         monto = (EditText) findViewById(R.id.eTxtMontoTran);
