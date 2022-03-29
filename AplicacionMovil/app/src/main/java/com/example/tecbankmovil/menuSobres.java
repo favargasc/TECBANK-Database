@@ -9,13 +9,24 @@ import android.widget.Toast;
 
 import com.example.roomDatabase.TecbankDatabase;
 
+/**
+ * The type Menu sobres.
+ */
 public class menuSobres extends AppCompatActivity {
 
     private int cuenta;
     private int savingEnv; //Identificador del sobre seleccionado en el recliclerview
     private EditText dinero;
+    /**
+     * The Database.
+     */
     TecbankDatabase database;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +39,11 @@ public class menuSobres extends AppCompatActivity {
         dinero = (EditText) findViewById(R.id.txtMontoMenuSobre);
     }
 
+    /**
+     * Depositar.
+     *
+     * @param view the view
+     */
     public void depositar(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
         if(monto != 0) {
@@ -50,6 +66,11 @@ public class menuSobres extends AppCompatActivity {
         }
     }
 
+    /**
+     * Devolver.
+     *
+     * @param view the view
+     */
     public void devolver(View view){
         double monto = Double.parseDouble(dinero.getEditableText().toString());
         if(monto != 0) {

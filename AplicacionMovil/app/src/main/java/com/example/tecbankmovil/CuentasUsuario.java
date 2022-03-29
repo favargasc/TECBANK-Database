@@ -17,12 +17,29 @@ import com.example.tecbankmovil.databinding.RecyclerViewAccountBinding;
 
 import java.util.List;
 
+/**
+ * The type Cuentas usuario.
+ */
 public class CuentasUsuario extends AppCompatActivity {
     private int accountId;
+    /**
+     * The Accounts.
+     */
     public List<Account> accounts;
+    /**
+     * The Database.
+     */
     TecbankDatabase database;
+    /**
+     * The Account adapter.
+     */
     UserAccountsAdapter accountAdapter = new UserAccountsAdapter();
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

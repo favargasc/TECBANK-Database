@@ -20,15 +20,26 @@ import com.example.tecbankmovil.RegistrarUsuario;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type User accounts adapter.
+ */
 public class UserAccountsAdapter extends RecyclerView.Adapter{
     private List<Account> accountsList;
-    
-    // public constructor for this class
+
+    /**
+     * Instantiates a new User accounts adapter.
+     */
+// public constructor for this class
     public UserAccountsAdapter()
     {
         this.accountsList = new ArrayList<Account>() {};
     }
 
+    /**
+     * Update adapter.
+     *
+     * @param accounts the accounts
+     */
     public void updateAdapter(List<Account> accounts){
         this.accountsList = accounts;
         notifyDataSetChanged();
@@ -37,11 +48,19 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
 
     // Create classes for each layout ViewHolder.
 
+    /**
+     * The type Layout account view holder.
+     */
     public class LayoutAccountViewHolder extends RecyclerView.ViewHolder {
 
         private TextView text_AccountNumber, text_Balance;
         private ConstraintLayout accountLayout;
 
+        /**
+         * Instantiates a new Layout account view holder.
+         *
+         * @param itemView the item view
+         */
         public LayoutAccountViewHolder(@NonNull View itemView)
         {
             super(itemView);
@@ -63,6 +82,13 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
     // ViewHolder classes defined above,
     // depending upon the layout passed as a parameter.
 
+    /**
+     * On create view holder recycler view . view holder.
+     *
+     * @param parent   the parent
+     * @param viewType the view type
+     * @return the recycler view . view holder
+     */
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -71,6 +97,12 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
         return new LayoutAccountViewHolder(layoutTwo);
     }
 
+    /**
+     * On bind view holder.
+     *
+     * @param holder   the holder
+     * @param position the position
+     */
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         //int image = itemClassList.get(position).geticon();
@@ -89,6 +121,11 @@ public class UserAccountsAdapter extends RecyclerView.Adapter{
         );
     }
 
+    /**
+     * Gets item count.
+     *
+     * @return the item count
+     */
     @Override
     public int getItemCount() {
         return accountsList.size();

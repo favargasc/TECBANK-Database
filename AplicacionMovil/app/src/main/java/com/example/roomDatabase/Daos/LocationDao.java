@@ -10,11 +10,24 @@ import com.example.roomDatabase.models.User;
 
 import java.util.List;
 
+/**
+ * The interface Location dao.
+ */
 @Dao
 public interface LocationDao {
-  @Insert
+    /**
+     * Insert.
+     *
+     * @param location the location
+     */
+    @Insert
   void insert(Location location);
 
-  @Query("SELECT * FROM location")
+    /**
+     * Gets locations.
+     *
+     * @return the locations
+     */
+    @Query("SELECT * FROM location")
   LiveData<List<Location>> getLocations();
 }

@@ -17,11 +17,22 @@ import com.example.utilities.Email;
 import java.nio.file.FileSystemAlreadyExistsException;
 import java.util.List;
 
+/**
+ * The type Pantalla menu.
+ */
 public class PantallaMenu extends AppCompatActivity {
     private int accountId;
+    /**
+     * The User.
+     */
     public User user;
 
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +41,11 @@ public class PantallaMenu extends AppCompatActivity {
         accountId = getIntent().getIntExtra("accountId",-1);
     }
 
+    /**
+     * Cuentas.
+     *
+     * @param view the view
+     */
     public void cuentas(View view){
 
         TecbankDatabase database = TecbankDatabase.getDatabase(this);
@@ -55,18 +71,33 @@ public class PantallaMenu extends AppCompatActivity {
         startActivity(cuenta);
     }
 
+    /**
+     * Sobres.
+     *
+     * @param view the view
+     */
     public void sobres(View view){
         Intent cSobre = new Intent(this, cuentasParaSobres.class);
         cSobre.putExtra("accountId", accountId);
         startActivity(cSobre);
     }
 
+    /**
+     * Informacion.
+     *
+     * @param view the view
+     */
     public void informacion(View view){
         Intent informacion = new Intent(this, SeccionInfo.class);
         informacion.putExtra("accountId", accountId);
         startActivity(informacion);
     }
 
+    /**
+     * Cerrar sesion.
+     *
+     * @param view the view
+     */
     public void cerrarSesion(View view){
         Intent cerSesion = new Intent(this, MainActivity.class);
         startActivity(cerSesion);

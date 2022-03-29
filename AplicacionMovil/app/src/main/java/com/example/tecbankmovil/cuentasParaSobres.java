@@ -6,10 +6,18 @@ import androidx.core.app.ComponentActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * The type Cuentas para sobres.
+ */
 public class cuentasParaSobres extends AppCompatActivity {
     private int accountId;
     private int numCuenta;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

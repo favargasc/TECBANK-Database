@@ -7,8 +7,16 @@ import com.example.roomDatabase.models.Location;
 import com.example.roomDatabase.models.SavingEnvelope;
 import com.example.roomDatabase.models.User;
 
+/**
+ * The type Populate.
+ */
 public class Populate {
 
+    /**
+     * Populate bank.
+     *
+     * @param database the database
+     */
     public static void populateBank(TecbankDatabase database) {
         database.bankDao().insert( new Bank("TECBANK", "TCBK"));
         database.bankDao().insert( new Bank("DAmore and Sons", "CYBR"));
@@ -33,6 +41,11 @@ public class Populate {
         database.bankDao().insert( new Bank("Erdman-Doyle", "AVD"));
     }
 
+    /**
+     * Populate location.
+     *
+     * @param database the database
+     */
     public static void populateLocation(TecbankDatabase database){
         database.locationDao().insert( new Location("36.1899557, 117.1168644", "Hucheng", "10:49 AM"));
         database.locationDao().insert( new Location("34.145966, 105.757408", "Xiongbei", "2:06 AM"));
@@ -43,6 +56,11 @@ public class Populate {
         database.locationDao().insert( new Location("-7.4104934, 110.3279026", "Ketawang", "8:55 AM"));
     }
 
+    /**
+     * Populate user.
+     *
+     * @param database the database
+     */
     public static void populateUser(TecbankDatabase database){
         database.userDao().insert(new User("lwarhurst0@dailymotion.com","Xmj9QM74","Loren","Warhurst","lwarhurst0"));      
         database.userDao().insert(new User("eflorentine1@disqus.com","Mmp7jjbdJLM","Eudora","Florentine","eflorentine1")); 
@@ -66,6 +84,11 @@ public class Populate {
         database.userDao().insert(new User("htitchmarshj@sakura.ne.jp","4XeCB8","Herman","Titchmarsh","htitchmarshj"));   
     }
 
+    /**
+     * Populate account.
+     *
+     * @param database the database
+     */
     public static void populateAccount(TecbankDatabase database){
         database.accountDao().insert(new Account("GI66 PZCC UJWW T96J ZMNW VJU", 76865750.91, 17));
         database.accountDao().insert(new Account("FI16 4979 4957 1008 02", 13545097.99, 3));
@@ -107,6 +130,11 @@ public class Populate {
     }
 
 
+    /**
+     * Populate envelopes.
+     *
+     * @param database the database
+     */
     public static void populateEnvelopes(TecbankDatabase database){
         database.savingEnvelopeDao().insert(new SavingEnvelope("Health Care", 85.7, 15));
         database.savingEnvelopeDao().insert(new SavingEnvelope("n/a", 95.81, 14));

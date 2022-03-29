@@ -19,6 +19,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.tecbankmovil.databinding.ActivityMapsBinding;
+
+/**
+ * The type Maps activity.
+ */
 /*
 * Clase modulo informativo mapa interactivo Google Maps
 * Muestra las sucursales TECBANK en Costa Rica y los horarios de c/u
@@ -31,6 +35,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private int accountId;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +62,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * If Google Play services is not installed on the device, the user will be prompted to install
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
+     *
+     * @param googleMap the google map
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {   //Cuando el mapa este disponible, esta funcion corre inmediatamente

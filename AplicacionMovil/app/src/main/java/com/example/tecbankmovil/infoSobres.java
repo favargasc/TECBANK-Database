@@ -15,13 +15,27 @@ import com.example.roomDatabase.TecbankDatabase;
 import com.example.roomDatabase.models.SavingEnvelope;
 import com.example.roomDatabase.models.User;
 
+/**
+ * The type Info sobres.
+ */
 public class infoSobres extends AppCompatActivity {
     private int accountId;
     private int numCuenta;
     private EditText nomSobre, montoInicial;
+    /**
+     * The Get sobre id observer.
+     */
     public Observer<Integer> getSobreIdObserver = null;
+    /**
+     * The Sobre id live data.
+     */
     public LiveData<Integer> sobreIdLiveData;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +54,9 @@ public class infoSobres extends AppCompatActivity {
         });
     }
 
+    /**
+     * Crear.
+     */
     public void crear(){
         //Registrar el nombre y el monto inicial de un sobre de ahorro
         TecbankDatabase database = TecbankDatabase.getDatabase(this);
@@ -68,6 +85,13 @@ public class infoSobres extends AppCompatActivity {
         sobreIdLiveData.observe(this, getSobreIdObserver);
 
     }
+
+    /**
+     * New sobre.
+     *
+     * @param database the database
+     * @param sobre    the sobre
+     */
     void newSobre(TecbankDatabase database, SavingEnvelope sobre){
         // Error when handling asyncTask, try not to do this if no errors
         Long insertResponse = database.savingEnvelopeDao().insert(sobre);
@@ -81,10 +105,19 @@ public class infoSobres extends AppCompatActivity {
 
     }
 
+    /**
+     * Succesfull register.
+     *
+     * @param idSobre the id sobre
+     */
     public void succesfullRegister(int idSobre){
         removeGetSobreIdObserver();
         Toast.makeText(getApplicationContext(), "Nuevo usuario: "+ idSobre, Toast.LENGTH_LONG).show();
     }
+
+    /**
+     * Remove get sobre id observer.
+     */
     public void removeGetSobreIdObserver(){
         sobreIdLiveData.removeObservers(this);
     }

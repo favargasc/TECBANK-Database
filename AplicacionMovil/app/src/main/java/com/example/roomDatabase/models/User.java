@@ -6,32 +6,67 @@ import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+/**
+ * The type User.
+ */
 @Entity(tableName = "user", indices = {@Index(value = {"user_name"},unique = true)})
 public class User {
 
-  @PrimaryKey(autoGenerate = true)
+    /**
+     * The Id.
+     */
+    @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "id")
   public int id;
 
-  @ColumnInfo(name = "name")
+    /**
+     * The Name.
+     */
+    @ColumnInfo(name = "name")
   public String name;
 
-  @ColumnInfo(name = "last_name")
+    /**
+     * The Last name.
+     */
+    @ColumnInfo(name = "last_name")
   public String lastName;
 
-  @ColumnInfo(name = "password")
+    /**
+     * The Password.
+     */
+    @ColumnInfo(name = "password")
   public String password;
 
-  @ColumnInfo(name = "email")
+    /**
+     * The Email.
+     */
+    @ColumnInfo(name = "email")
   public String email;
 
-  @ColumnInfo(name = "bank_id")
+    /**
+     * The Bank id.
+     */
+    @ColumnInfo(name = "bank_id")
   public int bankId;
 
-  @ColumnInfo(name = "user_name")
+    /**
+     * The User name.
+     */
+    @ColumnInfo(name = "user_name")
   public String userName;
 
-  @Ignore
+    /**
+     * Instantiates a new User.
+     *
+     * @param id       the id
+     * @param name     the name
+     * @param lastName the last name
+     * @param password the password
+     * @param email    the email
+     * @param bankId   the bank id
+     * @param userName the user name
+     */
+    @Ignore
   public User(int id, String name, String lastName, String password, String email, int bankId, String userName) {
     this.id = id;
     this.name = name;
@@ -42,7 +77,16 @@ public class User {
     this.userName = userName;
   }
 
-  public User(String email, String password, String name, String lastName, String userName) {
+    /**
+     * Instantiates a new User.
+     *
+     * @param email    the email
+     * @param password the password
+     * @param name     the name
+     * @param lastName the last name
+     * @param userName the user name
+     */
+    public User(String email, String password, String name, String lastName, String userName) {
     this.name = name;
     this.lastName = lastName;
     this.password = password;
@@ -51,55 +95,120 @@ public class User {
     this.userName = userName;
   }
 
-  public int getId() {
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
+    public int getId() {
     return this.id;
   }
 
-  public void setId(int id) {
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
+    public void setId(int id) {
     this.id = id;
   }
 
-  public String getName() {
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    public String getName() {
     return this.name;
   }
 
-  public void setName(String name) {
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
     this.name = name;
   }
 
-  public String getLastName() {
+    /**
+     * Gets last name.
+     *
+     * @return the last name
+     */
+    public String getLastName() {
     return this.lastName;
   }
 
-  public void setLastName(String lastName) {
+    /**
+     * Sets last name.
+     *
+     * @param lastName the last name
+     */
+    public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
-  public String getPassword() {
+    /**
+     * Gets password.
+     *
+     * @return the password
+     */
+    public String getPassword() {
     return this.password;
   }
 
-  public void setPassword(String password) {
+    /**
+     * Sets password.
+     *
+     * @param password the password
+     */
+    public void setPassword(String password) {
     this.password = password;
   }
 
-  public String getEmail() {
+    /**
+     * Gets email.
+     *
+     * @return the email
+     */
+    public String getEmail() {
     return this.email;
   }
 
-  public void setEmail(String email) {
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
+    public void setEmail(String email) {
     this.email = email;
   }
 
-  public int getBankId() {
+    /**
+     * Gets bank id.
+     *
+     * @return the bank id
+     */
+    public int getBankId() {
     return this.bankId;
   }
 
-  public void setBankId(int bankId) {
+    /**
+     * Sets bank id.
+     *
+     * @param bankId the bank id
+     */
+    public void setBankId(int bankId) {
     this.bankId = bankId;
   }
 
-  @Override
+    /**
+     * To string string.
+     *
+     * @return the string
+     */
+    @Override
   public String toString() {
     return "{" +
         " id='" + getId() + "'" +

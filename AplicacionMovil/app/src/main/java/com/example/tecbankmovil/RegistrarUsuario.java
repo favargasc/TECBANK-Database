@@ -16,11 +16,25 @@ import com.example.roomDatabase.Populate;
 import com.example.roomDatabase.TecbankDatabase;
 import com.example.roomDatabase.models.User;
 
+/**
+ * The type Registrar usuario.
+ */
 public class RegistrarUsuario extends AppCompatActivity {
     private EditText nombre, apellido, correo, nombreUs, contrasenna;
+    /**
+     * The Get user id observer.
+     */
     public Observer<Integer> getUserIdObserver = null;
+    /**
+     * The User id live data.
+     */
     public LiveData<Integer> userIdLiveData;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +55,9 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     }
 
+    /**
+     * Registrar.
+     */
     public void registrar(){
         //Registrar los datos del usuario en la base de datos y verificar si se guardo el usuario bien
         TecbankDatabase database = TecbankDatabase.getDatabase(this);
@@ -70,6 +87,12 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     }
 
+    /**
+     * New user.
+     *
+     * @param database the database
+     * @param newUser  the new user
+     */
     void newUser(TecbankDatabase database, User newUser){
 
 
@@ -86,6 +109,11 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     }
 
+    /**
+     * Succesfull register.
+     *
+     * @param idUser the id user
+     */
     public void succesfullRegister(int idUser){
         removeGetUserIdObserver();
         Intent mainMenu = new Intent(getApplicationContext(), PantallaMenu.class);
@@ -95,6 +123,9 @@ public class RegistrarUsuario extends AppCompatActivity {
 
     }
 
+    /**
+     * Remove get user id observer.
+     */
     public void removeGetUserIdObserver(){
         userIdLiveData.removeObservers(this);
     }

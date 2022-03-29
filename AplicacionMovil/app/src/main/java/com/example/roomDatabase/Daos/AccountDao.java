@@ -10,16 +10,35 @@ import com.example.roomDatabase.models.Account;
 
 import java.util.List;
 
+/**
+ * The interface Account dao.
+ */
 @Dao
 public interface AccountDao {
 
-    // Her goes the querys
+    /**
+     * Insert.
+     *
+     * @param account the account
+     */
+// Her goes the querys
     @Insert
     void insert(Account account);
 
+    /**
+     * Gets all accounts.
+     *
+     * @return the all accounts
+     */
     @Query("SELECT * FROM account")
     LiveData<List<Account>> getAllAccounts();
 
+    /**
+     * Gets account by user id.
+     *
+     * @param id the id
+     * @return the account by user id
+     */
     @Query("SELECT * FROM account WHERE user_id = :id")
     LiveData<List<Account>> getAccountByUserId(int id);
 
